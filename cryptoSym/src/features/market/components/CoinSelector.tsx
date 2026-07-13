@@ -15,10 +15,10 @@ export const CoinSelector = () =>{
     };
 
     const SelectorStyle: React.CSSProperties = {
-            color: '#fff',
-            backgroundColor: '#000000',
+            color: '#080707',
+            backgroundColor: '#ffffff',
             width: 200,
-            margin: '10px',
+            margin: '20px',
             border:'1px solid black'
     
     };
@@ -52,7 +52,8 @@ export const CoinSelector = () =>{
                 value: coin.id,
             }))}
             onChange={handleChange}
-            placeholder = 'Bitcoin (BTC)'
+            placeholder="Bitcoin (BTC)"
+            
         
         />
         </div>
