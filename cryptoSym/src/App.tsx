@@ -10,7 +10,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout >
         <AppHeader />
         <Layout>
           <Routes>

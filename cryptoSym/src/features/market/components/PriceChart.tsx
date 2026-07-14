@@ -10,6 +10,7 @@ import {
   CartesianGrid,
 } from 'recharts';
 import { type RootState } from '../../../app/store';
+import styles from "./PriceChart.module.css"
 
 export const PriceChart: React.FC = () => {
   const priceHistory = useSelector((state: RootState) => state.market.priceHistory);
@@ -18,19 +19,11 @@ export const PriceChart: React.FC = () => {
 
   return (
     <div>
-      <div
-        style={{
-          fontSize: '35px',
-          paddingTop: '15px',
-          marginLeft: '20px',
-          marginBottom: '10px',
-          borderTop: '2px solid rgb(255, 119, 0)',
-        }}
-      >
-        <span>${currentPrice}</span>
+      <div className={styles.chartsTitle}>
+        <span>{currentPrice}</span>
       </div>
 
-      <div style={{ width: '100%', height: 300 }}>
+      <div className = {styles.chartContainer} style={{ width: '100%', height: 300 }}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={priceHistory} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>

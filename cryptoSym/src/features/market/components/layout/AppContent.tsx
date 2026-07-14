@@ -4,19 +4,13 @@ import { CoinSelector } from '../CoinSelector';
 import { PriceChart } from '../PriceChart';
 import { AppSider } from './AppSider';
 import { TimeFramePanel } from '../TimeFramePanel';
+import styles from "./AppContent.module.css"
 
 const { Content } = Layout;
 export const AppContent = () => {
-  const contentStyle: React.CSSProperties = {
-    minHeight: 'calc(100vh - 60px)',
-
-    color: '#fff',
-    backgroundColor: '#000000',
-  };
-
   return (
     <>
-      <Content style={contentStyle}>
+      <Content className={styles.content}>
         <CoinSelector />
         <PriceChart />
         <TimeFramePanel />

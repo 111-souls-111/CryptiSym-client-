@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Radio } from 'antd';
 import { changeTimeFrame, type TimeFrame } from '../slices/marketSlice';
 import { type RootState } from '../../../app/store';
+import styles from './TimeFramePanel.module.css'
 
 export const TimeFramePanel: React.FC = () => {
   const dispatch = useDispatch();
@@ -28,9 +29,9 @@ export const TimeFramePanel: React.FC = () => {
             value={tf.value}
             style={{
               backgroundColor: currentTimeFrame === tf.value ? '#fa8c16' : '#141414',
-              color: currentTimeFrame === tf.value ? '#fff' : '#aaa',
               borderColor: '#303030',
             }}
+            className={currentTimeFrame === tf.value ? styles.active:styles.notActive}
           >
             {tf.label}
           </Radio.Button>
