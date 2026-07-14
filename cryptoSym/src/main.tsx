@@ -1,0 +1,14 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { store } from './app/store'
+import App from './App'
+import 'antd/dist/reset.css' // Сброс стилей для Ant Design
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+)
