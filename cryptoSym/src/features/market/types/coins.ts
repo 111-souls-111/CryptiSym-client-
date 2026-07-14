@@ -14,3 +14,8 @@ export interface DataCoins {
     volume_bar: VolumePoint[];
   };
 }
+
+export interface SelectedCoin{
+   value: string; 
+   label: React.ReactNode
+}
