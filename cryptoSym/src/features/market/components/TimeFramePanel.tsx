@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Radio } from 'antd';
-import { changeTimeFrame, type TimeFrame } from '../slices/marketSlice';
+import { changeTimeFrame} from '../slices/marketSlice';
 import { type RootState } from '../../../app/store';
 import styles from './TimeFramePanel.module.css'
+import { type TimeFrame } from '../types';
 
 export const TimeFramePanel: React.FC = () => {
   const dispatch = useDispatch();

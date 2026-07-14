@@ -1,38 +1,11 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { 
+  MarketState,
+  TimeFrame, 
+  CoinsInfo, 
+  DataCoins,
+} from '../types';
 
-export type TimeFrame = '1D' | '1W' | '1M';
-
-interface ChartPoint {
-  time: string;
-  price: number;
-}
-
-interface CoinsInfo {
-  id: string;
-  name: string;
-}
-
-interface VolumePoint {
-  time: string;
-  volume: number;
-}
-
-export interface DataCoins {
-  coin_id: string;
-  current_price: number;
-  change_24h_percent: number;
-  charts: { price_line: ChartPoint[]; volume_bar: VolumePoint[] };
-}
-
-interface MarketState {
-  selectedTimeFrame: TimeFrame;
-  coinsList: CoinsInfo[];
-  selectedCoinId: string;
-  currentPrice: number;
-  change24hPercent: number;
-  priceHistory: ChartPoint[];
-  volumeHistory: VolumePoint[];
-}
 
 const initialState: MarketState = {
   selectedTimeFrame: '1D',
