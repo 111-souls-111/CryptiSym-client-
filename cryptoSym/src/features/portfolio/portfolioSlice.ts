@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 interface PortfolioState {
-  balanceUSDC: number; 
+  balanceUSDC: number;
   assets: {
     [coinId: string]: number;
   };
@@ -9,15 +9,17 @@ interface PortfolioState {
 
 const initialState: PortfolioState = {
   balanceUSDC: 10000,
-  assets: {}
+  assets: {},
 };
 
 const portfolioSlice = createSlice({
   name: 'portfolio',
   initialState,
   reducers: {
-
-    setPortfolioData(state, action: PayloadAction<{ balanceUSDC: number; assets: { [coinId: string]: number } }>) {
+    setPortfolioData(
+      state,
+      action: PayloadAction<{ balanceUSDC: number; assets: { [coinId: string]: number } }>
+    ) {
       state.balanceUSDC = action.payload.balanceUSDC;
       state.assets = action.payload.assets;
     },
