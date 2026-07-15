@@ -1,14 +1,8 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { 
-  MarketState,
-  TimeFrame, 
-  CoinsInfo, 
-  DataCoins,
-} from '../types';
-
+import type { MarketState, TimeFrame, CoinsInfo, DataCoins, currentCoins } from '../types';
 
 const initialState: MarketState = {
-  selectedTimeFrame: '1D',
+  selectedTimeFrame: '24h',
   coinsList: [],
   selectedCoinId: 'bitcoin',
   currentPrice: 897.4,
@@ -35,7 +29,7 @@ const marketSlice = createSlice({
       state.selectedTimeFrame = action.payload;
     },
 
-    updateCurrentMarketData(state, action: PayloadAction<DataCoins[]>) {
+    updateCurrentMarketTickers(state, action: PayloadAction<DataCoins[]>) {
       const serverDataArray = action.payload;
       const ListCoins: CoinsInfo[] = serverDataArray.map(item => ({
         id: item.coin_id,
@@ -50,12 +44,18 @@ const marketSlice = createSlice({
         state.coinsList = ListCoins;
         state.currentPrice = activeCoinData.current_price;
         state.change24hPercent = activeCoinData.change_24h_percent;
-        state.priceHistory = activeCoinData.charts?.price_line || [];
-        state.volumeHistory = activeCoinData.charts?.volume_bar || [];
+        // state.priceHistory = activeCoinData.charts?.price_line || [];
+        // state.volumeHistory = activeCoinData.charts?.volume_bar || [];
       }
     },
+
+     
+        updateCurrentMarketData(state, action: PayloadAction<currentCoins>) {
+        state.priceHistory = action.payload.charts.price_line || [];
+        state.volumeHistory = action.payload.charts.volume_bar|| [];
+      }
   },
 });
 
-export const { changeSelectedCoin, updateCurrentMarketData, changeTimeFrame } = marketSlice.actions;
+export const { changeSelectedCoin, updateCurrentMarketData, changeTimeFrame, updateCurrentMarketTickers } = marketSlice.actions;
 export default marketSlice.reducer;

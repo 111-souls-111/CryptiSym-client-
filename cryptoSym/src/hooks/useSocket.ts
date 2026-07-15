@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { socket } from '../services/socket';
-import { updateCurrentMarketData } from '../features/market/slices/marketSlice';
+import { updateCurrentMarketData, updateCurrentMarketTickers } from '../features/market/slices/marketSlice';
 import { type RootState } from '../app/store';
+import { type currentCoins, type DataCoins} from "../features/market/types"
 
 export const useSocket = () => {
   const dispatch = useDispatch();
@@ -14,22 +15,29 @@ export const useSocket = () => {
       socket.connect();
     }
 
-    const handleMarketTickers = (data: any) => {
+    const handleMarketTickers = (data: DataCoins[]) => {
+      console.log(data)
+      dispatch(updateCurrentMarketTickers(data));
+    };
+      const handleMarketData = (data: currentCoins) => {
+        console.log(data)
       dispatch(updateCurrentMarketData(data));
     };
 
     socket.on('market_tickers', handleMarketTickers);
 
+    socket.on('market_data',handleMarketData);
+
     socket.on('connect', () => {
       console.log(' Сеть восстановлена');
       socket.emit('subscribe_market', {
-        coinId: selectedCoinId,
-        timeFrame: selectedTimeFrame,
+        coin_id: selectedCoinId,
+        time_range: selectedTimeFrame,
       });
     });
 
     return () => {
-      socket.off('market_tickers', handleMarketTickers);
+      socket.off('market_tickers', handleMarketData);
       socket.off('connect');
       socket.disconnect();
     };
@@ -40,8 +48,8 @@ export const useSocket = () => {
       console.log(`${selectedCoinId} - ${selectedTimeFrame}`);
 
       socket.emit('subscribe_market', {
-        coinId: selectedCoinId,
-        timeFrame: selectedTimeFrame,
+        coin_id: selectedCoinId,
+        time_range: selectedTimeFrame,
       });
     }
   }, [selectedCoinId, selectedTimeFrame]);
