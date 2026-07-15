@@ -15,6 +15,18 @@ export interface DataCoins {
   };
 }
 
+
+
+
+export interface currentCoins {
+  coin_id: string;
+  time_range?:string;
+  charts: {
+    price_line: ChartPoint[];
+    volume_bar: VolumePoint[];
+  };
+}
+
 export interface SelectedCoin {
   value: string;
   label: React.ReactNode;

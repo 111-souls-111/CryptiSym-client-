@@ -11,9 +11,11 @@ export const TimeFramePanel: React.FC = () => {
   const currentTimeFrame = useSelector((state: RootState) => state.market.selectedTimeFrame);
 
   const timeFrames: { value: TimeFrame; label: string }[] = [
-    { value: '1D', label: '1 День' },
-    { value: '1W', label: '1 Неделя' },
-    { value: '1M', label: '1 Месяц' },
+    { value: '24h', label: 'day' },
+    { value: '1h', label: '1h' },
+    { value: '7d', label: '7d' },
+    { value: '30d', label: '30d' },
+    { value: '1y', label: '1y' },
   ];
 
   return (
