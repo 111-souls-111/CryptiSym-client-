@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { type SelectedCoin } from '../types'
+import { type SelectedCoin } from '../types';
 import { type RootState } from '../../../app/store';
 import { changeSelectedCoin } from '../slices/marketSlice';
 import { Select } from 'antd';
-import styles from "./coinSelector.module.css"
+import styles from './coinSelector.module.css';
 
 export const CoinSelector = () => {
   const dispatch = useDispatch();

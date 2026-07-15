@@ -1,11 +1,8 @@
 import { Layout } from 'antd';
 import { Link } from 'react-router-dom';
-import styles from './AppHeader.module.css'
+import styles from './AppHeader.module.css';
 
 export const AppHeader = () => {
-
-
-
   return (
     <Layout.Header className={styles.header}>
       <div className={styles.navWrapper}>
@@ -17,7 +14,7 @@ export const AppHeader = () => {
           <Link to="/about" className={styles.navLink}>
             Portfolio
           </Link>
-          <Link to="/products" className={styles.navLink} >
+          <Link to="/products" className={styles.navLink}>
             Transaction
           </Link>
         </nav>

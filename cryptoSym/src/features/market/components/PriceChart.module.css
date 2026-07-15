@@ -1,13 +1,12 @@
-.chartsTitle{
-    font-size: 35px;
-    padding-top: 15px;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border-top: 2px solid rgb(255, 119, 0);
+.chartsTitle {
+  font-size: 35px;
+  padding-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(255, 119, 0);
 }
 
-.chartContainer{
-    width: 100%;
-    height: 300;
-    
+.chartContainer {
+  width: 100%;
+  height: 300;
 }
