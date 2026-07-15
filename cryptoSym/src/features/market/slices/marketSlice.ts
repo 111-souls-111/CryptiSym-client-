@@ -1,11 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import type { 
-  MarketState,
-  TimeFrame, 
-  CoinsInfo, 
-  DataCoins,
-} from '../types';
-
+import type { MarketState, TimeFrame, CoinsInfo, DataCoins } from '../types';
 
 const initialState: MarketState = {
   selectedTimeFrame: '1D',

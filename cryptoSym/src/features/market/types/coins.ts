@@ -1,5 +1,5 @@
-import { type ChartPoint } from "./charts";
-import { type VolumePoint } from "./charts";
+import { type ChartPoint } from './charts';
+import { type VolumePoint } from './charts';
 export interface CoinsInfo {
   id: string;
   name: string;
@@ -15,7 +15,7 @@ export interface DataCoins {
   };
 }
 
-export interface SelectedCoin{
-   value: string; 
-   label: React.ReactNode
+export interface SelectedCoin {
+  value: string;
+  label: React.ReactNode;
 }
