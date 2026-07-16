@@ -15,12 +15,9 @@ export interface DataCoins {
   };
 }
 
-
-
-
 export interface currentCoins {
   coin_id: string;
-  time_range?:string;
+  time_range?: string;
   charts: {
     price_line: ChartPoint[];
     volume_bar: VolumePoint[];

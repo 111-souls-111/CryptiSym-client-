@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { socket } from '../services/socket';
-import { updateCurrentMarketData, updateCurrentMarketTickers } from '../features/market/slices/marketSlice';
+import {
+  updateCurrentMarketData,
+  updateCurrentMarketTickers,
+} from '../features/market/slices/marketSlice';
 import { type RootState } from '../app/store';
-import { type currentCoins, type DataCoins} from "../features/market/types"
+import { type currentCoins, type DataCoins } from '../features/market/types';
 
 export const useSocket = () => {
   const dispatch = useDispatch();
@@ -16,17 +19,17 @@ export const useSocket = () => {
     }
 
     const handleMarketTickers = (data: DataCoins[]) => {
-      console.log(data)
+      console.log(data);
       dispatch(updateCurrentMarketTickers(data));
     };
-      const handleMarketData = (data: currentCoins) => {
-        console.log(data)
+    const handleMarketData = (data: currentCoins) => {
+      console.log(data);
       dispatch(updateCurrentMarketData(data));
     };
 
     socket.on('market_tickers', handleMarketTickers);
 
-    socket.on('market_data',handleMarketData);
+    socket.on('market_data', handleMarketData);
 
     socket.on('connect', () => {
       console.log(' Сеть восстановлена');

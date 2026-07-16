@@ -50,13 +50,17 @@ const marketSlice = createSlice({
       }
     },
 
-     
-        updateCurrentMarketData(state, action: PayloadAction<currentCoins>) {
-        state.priceHistory = action.payload.charts.price_line || [];
-        state.volumeHistory = action.payload.charts.volume_bar|| [];
-      }
+    updateCurrentMarketData(state, action: PayloadAction<currentCoins>) {
+      state.priceHistory = action.payload.charts.price_line || [];
+      state.volumeHistory = action.payload.charts.volume_bar || [];
+    },
   },
 });
 
-export const { changeSelectedCoin, updateCurrentMarketData, changeTimeFrame, updateCurrentMarketTickers } = marketSlice.actions;
+export const {
+  changeSelectedCoin,
+  updateCurrentMarketData,
+  changeTimeFrame,
+  updateCurrentMarketTickers,
+} = marketSlice.actions;
 export default marketSlice.reducer;

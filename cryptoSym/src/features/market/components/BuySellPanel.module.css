@@ -1,0 +1,127 @@
+/* BuySellPanel.module.css */
+
+.siderCard {
+  background: #1a1a2e;
+  border-radius: 16px;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.siderCard :global(.ant-card-body) {
+  padding: 0;
+}
+
+/* Action Buttons */
+.actionButtons {
+  margin-bottom: 24px;
+  gap: 12px !important;
+}
+
+.sellButton {
+  background: #ff4d4f;
+  border-color: #ff4d4f;
+  border-radius: 8px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 1;
+}
+
+.sellButton:hover {
+  background: #ff7875 !important;
+  border-color: #ff7875 !important;
+}
+
+.buyButton {
+  background: #1890ff;
+  border-color: #1890ff;
+  border-radius: 8px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 1;
+}
+
+.buyButton:hover {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+/* Balance Section */
+.balanceSection {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bitcoinTitle {
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+
+.bitcoinLabel {
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  margin-left: 4px;
+}
+
+.balanceSection :global(.ant-typography-secondary) {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.balanceSection :global(.ant-typography-strong) {
+  color: #ffffff;
+}
+
+/* Price Card */
+.priceCard {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+}
+
+.priceCard :global(.ant-card-body) {
+  padding: 0;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.priceValue {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+.priceCard :global(.ant-typography-secondary) {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.priceCard :global(.ant-typography-strong) {
+  color: #ffffff;
+}
+
+/* Pay Button */
+.payButton {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  border-radius: 8px;
+  height: 48px;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.payButton:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%) !important;
+}

@@ -20,10 +20,10 @@ export const PriceChart: React.FC = () => {
   return (
     <div>
       <div className={styles.chartsTitle}>
-        <span>{currentPrice}</span>
+        <span>{currentPrice} $</span>
       </div>
 
-      <div className={styles.chartContainer} style={{ width: '100%', height: 300 }}>
+      <div className={styles.chartContainer} style={{ width: '100%', height: 450 }}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={priceHistory} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
