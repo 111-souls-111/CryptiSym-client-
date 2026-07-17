@@ -10,3 +10,24 @@
   font-weight: 500;
   transition: color 0.2s ease;
 }
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Avatar{
+  color: #ffa600;
+}
+
+.replenishmentButton{
+  background-color: #d76f08;
+  color: black;
+  margin-right: 10px;
+}
+
+.replenishmentButton:hover{
+  background-color: #d76f08;
+  color: black;
+}
+
