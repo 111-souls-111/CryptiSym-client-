@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import marketReducer from '../features/market/slices/marketSlice';
-import portfolioReducer from '../features/portfolio/portfolioSlice';
+import portfolioReducer from '../features/portfolio/slice/portfolioSlice';
 
 export const store = configureStore({
   reducer: {
