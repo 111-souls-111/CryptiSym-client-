@@ -4,7 +4,7 @@ import axios from 'axios';
 // Контракт на отправку (TradeRequest)
 interface TradeRequest {
   coin_id: string;
-  type: 'BUY' | 'SELL';
+  type: string;
   quantity: number;
 }
 

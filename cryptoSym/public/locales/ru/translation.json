@@ -1,0 +1,41 @@
+
+
+{
+  "common": {
+    "welcome": "Добро пожаловать в CryptiSym",
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "success": "Успешно",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить"
+  },
+  "auth": {
+    "login": "Вход",
+    "register": "Регистрация",
+    "email": "Email",
+    "password": "Пароль",
+    "forgotPassword": "Забыли пароль?"
+  },
+  "trade": {
+    "buy": "Купить",
+    "sell": "Продать",
+    "balance": "Текущий баланс",
+    "amountBuy": "СКОЛЬКО ",
+    "price": "Текущая цена",
+    "pay": "Оплатить",
+    "currency": "валюта"
+    
+  },
+  "portfolio": {
+    "title": "Мой портфель",
+    "totalValue": "Общая стоимость",
+    "profit": "Прибыль",
+    "assets": "Активы"
+  },
+  "errors": {
+    "required": "Это поле обязательно",
+    "invalidEmail": "Неверный email",
+    "minLength": "Минимальная длина: {{count}} символов",
+    "networkError": "Ошибка сети, попробуйте позже"
+  }
+}

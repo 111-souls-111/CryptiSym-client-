@@ -1,0 +1,38 @@
+{
+  "common": {
+    "welcome": "Welcome to CryptiSym",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?"
+  },
+  "trade": {
+    "buy": "Buy",
+    "sell": "Sell",
+    "balance": "Сurrent balance",
+    "amountBuy": "AMOUNT ",
+    "price": "Сurrent price",
+    "pay": "Pay",
+    "currency": "Currency"
+  },
+  "portfolio": {
+    "title": "My Portfolio",
+    "totalValue": "Total Value",
+    "profit": "Profit",
+    "assets": "Assets"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email",
+    "minLength": "Minimum length: {{count}} characters",
+    "networkError": "Network error, please try again"
+  }
+}

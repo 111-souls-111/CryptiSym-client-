@@ -13,42 +13,26 @@
  
 }
 
-.sellButton {
-  background: rgb(194, 147, 4);
+.sellBuyButton {
+  background: rgb(0, 0, 0);
+  color:#bd4906;
   border: 0px;
   border-radius: 16px;
   height: 44px;
   font-weight: 600;
   font-size: 16px;
   flex: 0.3;
+
 }
 
-.sellButton:hover {
-  background:rgb(194, 147, 4) !important;
-  border-color: rgb(194, 147, 4) !important;
+
+.sellBuyButton:hover {
+  background: rgb(164, 57, 4) !important;
+  border: none !important;
   color: #000000 !important;
 }
 
-.buyButton {
-  background: #00060c;
-  color:#bd4906;
-  border: 0px;
-  border-radius: 15px;
-  height: 44px;
-  font-weight: 600;
-  font-size: 16px;
-  flex: 0.3;
-  transform: translateX(-20px);
-}
 
-.buyButton:hover {
-  background: rgb(19, 14, 0) !important;
-  border-color: rgb(0, 0, 0) !important;
-  color: #bd4906 !important;
-}
-
-
-/* Balance Section */
 .balanceSection {
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -126,3 +110,17 @@
   border: none !important;
   color: #000000 !important;
 }
+
+
+
+.activeSellBuyButton{
+  background: rgb(194, 147, 4) !important;
+  color:#000000;
+  border: 0px;
+  border-radius: 15px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 0.3;
+}
+

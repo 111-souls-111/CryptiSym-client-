@@ -2,30 +2,29 @@ import { useState } from 'react';
 import { Card, Button, Flex, Typography, Space, InputNumber, message } from 'antd';
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { type AppDispatch, type RootState } from '../../../app/store'; // Скорректируй пути под проект
+import { type AppDispatch, type RootState } from '../../../app/store'; 
 import { executeTrade } from '../../portfolio/slice/portfolioSlice';
 import styles from './BuySellPanel.module.css';
+import { useTranslation } from 'react-i18next';
 
 const { Text, Title } = Typography;
 
 export const BuySellPanel = () => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch<AppDispatch>();
 
-  // Локальный стейт панели
-  const [tradeType, setTradeType] = useState<'BUY' | 'SELL'>('BUY');
+  const [tradeType, setTradeType] = useState<string>(t('trade.buy'));
   const [quantity, setQuantity] = useState<number | null>(null);
 
-  // 1. Данные из стрима WebSocket (согласно контракту MarketTickersEvent)
   const coinId = useSelector((state: RootState) => state.market.selectedCoinId) || 'bitcoin';
   const currentPrice = useSelector((state: RootState) => state.market.currentPrice) || 0
   const change24h = useSelector((state: RootState) => state.market.change24hPercent) || 0;
 
-  // 2. Данные кошелька из Redux
   const balanceUsdc = useSelector((state: RootState) => state.portfolio.balance);
   const portfolioItems = useSelector((state: RootState) => state.portfolio.items);
   const isSubmitting = useSelector((state: RootState) => state.portfolio.loading);
 
-  // Количество текущей монеты в портфеле пользователя
   const ownedQuantity = portfolioItems[coinId]?.quantity || 0;
 
   const coinDisplayName = coinId.charAt(0).toUpperCase() + coinId.slice(1);
@@ -38,12 +37,11 @@ export const BuySellPanel = () => {
       return;
     }
 
-    // Пре-валидация на клиенте для экономии трафика и лучшего UX
-    if (tradeType === 'BUY' && (quantity * currentPrice > balanceUsdc)) {
+    if (tradeType === 'Buy' && (quantity * currentPrice > balanceUsdc)) {
       message.error('Insufficient funds for this transaction');
       return;
     }
-    if (tradeType === 'SELL' && quantity > ownedQuantity) {
+    if (tradeType === 'Sell' && quantity > ownedQuantity) {
       message.error(`Not enough ${coinDisplayName} in your portfolio`);
       return;
     }
@@ -59,7 +57,7 @@ export const BuySellPanel = () => {
 
       if (executeTrade.fulfilled.match(resultAction)) {
         message.success('Ордер успешно исполнен');
-        setQuantity(null); // Сбрасываем поле ввода
+        setQuantity(null);
       } else {
         message.error(resultAction.payload as string || 'Ошибка при исполнении ордера');
       }
@@ -70,19 +68,19 @@ export const BuySellPanel = () => {
 
   return (
     <Card className={styles.siderCard} bordered={false}>
-      {/* Кнопки переключения BUY/SELL */}
+
       <Flex className={styles.actionButtons}>
         <Button 
-          className={`${styles.sellButton} ${tradeType === 'SELL' ? styles.activeSell : ''}`}
-          onClick={() => setTradeType('SELL')}
+          className={`${tradeType === t("trade.sell") ? styles.activeSellBuyButton : styles.sellBuyButton}`}
+          onClick={() =>  setTradeType(t('trade.sell'))}
         >
-          Sell
+          {t('trade.sell')}
         </Button>
         <Button 
-          className={`${styles.buyButton} ${tradeType === 'BUY' ? styles.activeBuy : ''}`}
-          onClick={() => setTradeType('BUY')}
+          className={`${tradeType === t("trade.buy") ? styles.activeSellBuyButton : styles.sellBuyButton}`}
+          onClick={() => setTradeType(t('trade.buy'))}
         >
-          Buy
+          {t('trade.buy')}
         </Button>
       </Flex>
 
@@ -95,7 +93,7 @@ export const BuySellPanel = () => {
           </Text>
         </Title>
         <Flex justify="space-between" align="center">
-          <Text>current balance</Text>
+          <Text>{t('trade.balance')}</Text>
           <Text strong>{balanceUsdc.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} USDC</Text>
         </Flex>
       </div>
@@ -105,7 +103,7 @@ export const BuySellPanel = () => {
         <Flex vertical gap="small">
           <div>
             <Flex justify="space-between" className={styles.priceWrapper}>
-              <Text className={styles.currentPrice}>current price</Text>
+              <Text className={styles.currentPrice}>{t("trade.price")}</Text>
 
               <Space size={4}>
                 <Text className={styles.priceValue}>
@@ -123,7 +121,7 @@ export const BuySellPanel = () => {
             </Flex>
           </div>
           <Flex justify="space-between">
-            <Text className={styles.currency}>currency</Text>
+            <Text className={styles.currency}>{t("trade.currency")}</Text>
             <Text className={styles.currency}>USDC</Text>
           </Flex>
         </Flex>
@@ -132,7 +130,7 @@ export const BuySellPanel = () => {
       {/* Поле ввода количества (Quantity) */}
       <div style={{ margin: '16px 0 8px 0' }}>
         <Text type="secondary" style={{ display: 'block', marginBottom: '6px', fontSize: '11px', textTransform: 'uppercase' }}>
-          Amount to {tradeType}
+          {t("trade.amountBuy")}{tradeType}
         </Text>
         <InputNumber
           min={0.00000001}
@@ -144,14 +142,13 @@ export const BuySellPanel = () => {
         />
       </div>
 
-      {/* Оранжевая кнопка действия (to pay) */}
       <Button 
         className={styles.payButton} 
         onClick={handlePay}
         loading={isSubmitting}
         disabled={!quantity || quantity <= 0}
       >
-        Pay
+      {t('trade.pay')}
       </Button>
     </Card>
   );

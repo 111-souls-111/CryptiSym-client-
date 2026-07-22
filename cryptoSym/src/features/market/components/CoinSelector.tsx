@@ -25,6 +25,9 @@ export const CoinSelector = () => {
         }))}
         onChange={handleChange}
         placeholder="Bitcoin (BTC)"
+                    dropdownStyle={{
+            backgroundColor: ' #d76f08 ',
+          }}
       />
     </div>
   );
