@@ -1,11 +1,17 @@
 .active {
-  color: #fff;
+  color: var(--white-color);
+  border-color: var(--white-color) !important;
+  background-color: var(--nav-orange) !important ;
+
 }
 
 .notActive {
-  color: #aaa;
+  color: var(--dark-white-color);
+  border-color: var(--white-color) !important;
+  background-color: var(--grey-color) !important;
 }
 
 .container {
   margin-left: 20px;
 }
+

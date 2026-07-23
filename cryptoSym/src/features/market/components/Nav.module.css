@@ -43,7 +43,7 @@
 
 .langSelect {
   background-color: var(--nav-orange);
-  color: black;
+  color: var(--accent-color);
   width: 113px !important;
   height: 32px;
   margin: 20px;

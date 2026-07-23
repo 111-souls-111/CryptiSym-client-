@@ -1,6 +1,6 @@
 .content {
   margin: 0 auto;
   min-height: calc(100vh - 60px);
-  color: #fff;
-  background-color: #000000;
+  color: var(--white-color);
+  background-color: var(--accent-color);
 }

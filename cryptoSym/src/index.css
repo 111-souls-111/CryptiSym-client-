@@ -6,6 +6,9 @@
   --dark-white-color: rgb(223, 221, 220);
   --accent-color: rgb(0, 0, 0);
   --grey-color: rgb(19, 16, 16);
+  --header-color: rgb(20, 20, 20);
+  --arrow-green: #52c41a;
+  --arrow-red: #ff4d4f;
 
   --small-radius: 16px;
 }

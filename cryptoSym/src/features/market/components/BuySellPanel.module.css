@@ -117,3 +117,30 @@
   border: none !important;
   color: var(--white-color) !important;
 }
+
+.arrowUp{
+  color: var(--arrow-green);
+  font-size: 14px;
+}
+
+.arrowDown{
+  color: var(--arrow-red);
+  font-size: 14px;
+}
+
+.amount{
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white-color) !important;
+}
+
+.amountInput{
+  width: 100%;
+  border-radius: 6px;
+}
+
+.amountSection{
+  margin: 16px 0 8px 0;
+}

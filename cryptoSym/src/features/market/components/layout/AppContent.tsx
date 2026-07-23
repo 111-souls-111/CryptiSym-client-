@@ -1,5 +1,4 @@
 import { Layout } from 'antd';
-import React from 'react';
 import { CoinSelector } from '../CoinSelector';
 import { PriceChart } from '../PriceChart';
 import { AppSider } from './AppSider';

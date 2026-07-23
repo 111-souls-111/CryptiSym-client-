@@ -30,10 +30,7 @@ export const TimeFramePanel: React.FC = () => {
           <Radio.Button
             key={tf.value}
             value={tf.value}
-            style={{
-              backgroundColor: currentTimeFrame === tf.value ? '#fa8c16' : '#141414',
-              borderColor: '#303030',
-            }}
+  
             className={currentTimeFrame === tf.value ? styles.active : styles.notActive}
           >
             {tf.label}

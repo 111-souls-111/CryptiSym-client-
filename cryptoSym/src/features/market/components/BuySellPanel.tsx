@@ -40,6 +40,7 @@ export const BuySellPanel = () => {
       message.error('Insufficient funds for this transaction');
       return;
     }
+
     if (tradeType === 'Sell' && quantity > ownedQuantity) {
       message.error(`Not enough ${coinDisplayName} in your portfolio`);
       return;
@@ -60,6 +61,7 @@ export const BuySellPanel = () => {
       } else {
         message.error((resultAction.payload as string) || 'Ошибка при исполнении ордера');
       }
+
     } catch (err) {
       message.error('System error occurred');
     }
@@ -116,11 +118,11 @@ export const BuySellPanel = () => {
                   })}
                 </Text>
                 {isPriceUp ? (
-                  <ArrowUpOutlined style={{ color: '#52c41a', fontSize: 14 }} />
+                  <ArrowUpOutlined className={styles.arrowUp} />
                 ) : (
-                  <ArrowDownOutlined style={{ color: '#ff4d4f', fontSize: 14 }} />
+                  <ArrowDownOutlined className={styles.arrowUp} />
                 )}
-                <Text style={{ color: isPriceUp ? '#52c41a' : '#ff4d4f' }}>
+                <Text className={`${isPriceUp ? styles.arrowUp : styles.arrowDown}`}>
                   {isPriceUp ? '+' : ''}
                   {change24h.toFixed(2)}%
                 </Text>
@@ -134,15 +136,10 @@ export const BuySellPanel = () => {
         </Flex>
       </Card>
 
-      <div style={{ margin: '16px 0 8px 0' }}>
+      <div className={styles.amountSection}>
         <Text
           type="secondary"
-          style={{
-            display: 'block',
-            marginBottom: '6px',
-            fontSize: '11px',
-            textTransform: 'uppercase',
-          }}
+          className={styles.amount}
         >
           {t('trade.amountBuy')}
           {tradeType}
@@ -153,7 +150,7 @@ export const BuySellPanel = () => {
           placeholder="0.0000"
           value={quantity}
           onChange={val => setQuantity(val)}
-          style={{ width: '100%', borderRadius: '6px' }}
+          className={styles.amountInput}
         />
       </div>
 

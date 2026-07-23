@@ -1,12 +1,12 @@
 .header {
   padding: 0 20px;
   height: 60;
-  background-color: #141414;
-  border-bottom: 1px solid #262626;
+  background-color: var(--header-color);
+  border-bottom: 1px solid var(--grey-color);
 }
 
 .navWrapper {
-  color: #fa8c16;
+  color: var(--nav-orange);
   font-weight: bold;
   font-size: 18px;
 }
