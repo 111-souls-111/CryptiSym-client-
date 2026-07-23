@@ -5,11 +5,19 @@
 }
 
 .navLink {
-  color: #ffa600;
+  color:  var(--nav-orange);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
+
+.navLink:hover {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
 
 .wrapper{
   display: flex;
@@ -17,24 +25,28 @@
 }
 
 .Avatar{
-  color: #ffa600;
+  color: var(--nav-orange);
 }
 
+.Avatar:hover{
+  color: var(--white-color);
+}
 .replenishmentButton{
-  background-color: #d76f08;
-  color: black;
+  background-color:  var(--nav-orange);
+  color: var(--accent-color);
   margin-right: 10px;
 }
 
 .replenishmentButton:hover{
-  background-color: #d76f08;
-  color: black;
+  background-color: var(--nav-orange) !important;
+  color:  var(--white-color) !important;
 }
 
 .langSelect{
-  background-color: #d76f08 ;
+  background-color:  var(--nav-orange);
   color: black;
-  width: 200;
+  width: 113px !important;
+  height: 32px;
   margin: 20px;
   border: none
   

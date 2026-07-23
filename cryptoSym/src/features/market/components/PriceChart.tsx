@@ -11,11 +11,13 @@ import {
 } from 'recharts';
 import { type RootState } from '../../../app/store';
 import styles from './PriceChart.module.css';
+import { useTranslation } from 'react-i18next';
 
 export const PriceChart: React.FC = () => {
   const priceHistory = useSelector((state: RootState) => state.market.priceHistory);
   //   const selectedCoinId = useSelector((state: RootState) => state.market.selectedCoinId);
   const currentPrice = useSelector((state: RootState) => state.market.currentPrice);
+  const { t } = useTranslation()
 
   return (
     <div>
@@ -47,7 +49,7 @@ export const PriceChart: React.FC = () => {
                 color: '#fff',
                 height: '50px',
               }}
-              formatter={(value: any) => [`$${value.toFixed(2)}`, 'Цена']}
+              formatter={(value: any) => [`$${value.toFixed(2)}, $${t('chart.price')}`]}
             />
             <Area
               type="monotone"

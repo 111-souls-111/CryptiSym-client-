@@ -1,9 +1,9 @@
 /* BuySellPanel.module.css */
 
 .siderCard {
-  background: #bd4906;
+  background: var(--primary-color);
   border-radius: 16px;
-  color: #ffffff;
+  color: var(--white-color);
   margin: 30px
   
 }
@@ -13,34 +13,18 @@
  
 }
 
-.sellBuyButton {
-  background: rgb(0, 0, 0);
-  color:#bd4906;
-  border: 0px;
-  border-radius: 16px;
-  height: 44px;
-  font-weight: 600;
-  font-size: 16px;
-  flex: 0.3;
-
-}
 
 
-.sellBuyButton:hover {
-  background: rgb(164, 57, 4) !important;
-  border: none !important;
-  color: #000000 !important;
-}
 
 
 .balanceSection {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--white-color);
 }
 
 .bitcoinTitle {
-  color: #350707a7 !important;
+  color: var(--white-color) !important;
   margin-bottom: 8px !important;
   font-size: 50px !important;
   font-weight: 700 !important;
@@ -49,14 +33,14 @@
 }
 
 .bitcoinLabel {
-  color: rgb(0, 0, 0) !important;
+  color: var(--white-color) !important;
   font-size: 40px !important;
   font-weight: 400 !important;
 }
 
 /* Price Card */
 .priceCard {
-  background: rgba(0, 0, 0, 0.951) !important;
+  background: var(--accent-color) !important;
   border-radius: 12px;
   margin-bottom: 24px;
   padding: 20px 20px;
@@ -73,28 +57,27 @@
   align-items: center;
   gap: 12px;
   margin-top: 4px;
-  color: #bd4906 !important;
+  color: var(--white-color) !important;
 }
 
 .currentPrice{
-  color: #bd4906 !important;
+  color: var(--white-color) !important;
 }
 
 .priceValue {
-  color: #ffffff !important;
+  color: var(--white-color) !important;
   font-size: 19px !important;
   font-weight: 700 !important;
-  color: #bd4906 !important;
 }
 
 .currency{
-  color: #bd4906 !important;
+  color: var(--white-color) !important;
 }
 
 
 .payButton {
-  background: black;
-  color: #bd4906;
+  background: var(--accent-color);
+  color: var(--white-color);
   border: none;
   border-radius: 8px;
   height: 48px;
@@ -106,21 +89,46 @@
 }
 
 .payButton:hover {
-  background: rgb(164, 57, 4) !important;
+  background: var(--grey-color) !important;
   border: none !important;
-  color: #000000 !important;
+  color: var(--accent-color) !important;
 }
 
 
 
 .activeSellBuyButton{
-  background: rgb(194, 147, 4) !important;
-  color:#000000;
+  background: var(--white-color) !important;
+  color: var(--accent-color);
   border: 0px;
-  border-radius: 15px;
+  border-radius: 16px;
   height: 44px;
   font-weight: 600;
   font-size: 16px;
   flex: 0.3;
+}
+
+.sellBuyButton {
+  background: var(--accent-color);
+  color: var(--white-color);
+  border: 0px;
+  border-radius: 16px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 0.3;
+
+}
+
+
+.sellBuyButton:hover {
+  background: var(--grey-color) !important;
+  border: none !important;
+  color: var(--white-color) !important;
+}
+
+.activeSellBuyButton:hover {
+  background: var(--dark-white-color) !important; 
+  border: none !important;
+  color: var(--white-color) !important;
 }
 

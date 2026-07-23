@@ -4,7 +4,8 @@ import { UserOutlined } from '@ant-design/icons';
 import { Button, Avatar, Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 import 'flag-icons/css/flag-icons.min.css';
-import { useState } from 'react';
+
+
 
   const languages = [
   { code: 'ru', label: 'Русский', flag: 'ru' },
@@ -14,11 +15,12 @@ import { useState } from 'react';
 
 export const Nav = () => {
   const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState<string>(i18n.language);
+  const { t } = useTranslation();
+  const currentLang =i18n.language;
 
   const changeLanguage = (value: string) => {
     i18n.changeLanguage(value);
-    setCurrentLang(value)
+
    
   };
 
@@ -27,13 +29,13 @@ export const Nav = () => {
     <nav className={styles.nav}>
       <h3>CryptoSym</h3>
       <Link to="/" className={styles.navLink}>
-        Store
+        {t("nav.store")}
       </Link>
       <Link to="/about" className={styles.navLink}>
-        Portfolio
+        {t("nav.portfolio")}
       </Link>
       <Link to="/products" className={styles.navLink}>
-        Transaction
+        {t("nav.transaction")}
       </Link>
     </nav>
 
@@ -46,7 +48,7 @@ export const Nav = () => {
             value: lang.code,
             label: (
               <span>
-                <span className={`fi fi-${lang.flag}`} style={{ marginRight: '8px' }} />
+                <span className={`fi fi-${lang.flag}`} style={{ marginRight: '8px'}} />
                 {lang.label}
               </span>
             ),
@@ -59,7 +61,7 @@ export const Nav = () => {
         />
 
 
-        <Button className={styles.replenishmentButton} type="primary">Replenishment</Button>
+        <Button className={styles.replenishmentButton} type="primary">{t('nav.replenishment')}</Button>
         <Avatar className={styles.Avatar} size={64} icon={<UserOutlined />} />
       </div>
 

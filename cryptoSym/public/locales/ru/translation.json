@@ -4,6 +4,7 @@
   "common": {
     "welcome": "Добро пожаловать в CryptiSym",
     "loading": "Загрузка...",
+     "count":"Количество не может быть меньше 0.00000001",
     "error": "Ошибка",
     "success": "Успешно",
     "cancel": "Отмена",
@@ -37,5 +38,15 @@
     "invalidEmail": "Неверный email",
     "minLength": "Минимальная длина: {{count}} символов",
     "networkError": "Ошибка сети, попробуйте позже"
+  },
+  "nav": {
+    "store":"Рынок",
+    "portfolio":"Портфель",
+    "transaction":"Транзакции",
+    "replenishment":"Пополнение"
+  },
+  "Chart": {
+    "price": "Цена"
+
   }
 }

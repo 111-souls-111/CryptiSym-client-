@@ -2,6 +2,7 @@
   "common": {
     "welcome": "Welcome to CryptiSym",
     "loading": "Loading...",
+    "count":"Quantity must be at least 0.00000001",
     "error": "Error",
     "success": "Success",
     "cancel": "Cancel",
@@ -34,5 +35,15 @@
     "invalidEmail": "Invalid email",
     "minLength": "Minimum length: {{count}} characters",
     "networkError": "Network error, please try again"
+  },
+    "nav": {
+    "store":"Store",
+    "portfolio":"Portfolio",
+    "transaction":"Transaction",
+    "replenishment":"Replenishment"
+  },
+    "chart": {
+    "price": "Price"
   }
+  
 }

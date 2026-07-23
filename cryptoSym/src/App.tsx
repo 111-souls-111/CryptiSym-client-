@@ -4,6 +4,7 @@ import { AppHeader } from './features/market/components/layout/AppHeader';
 import { AppContent } from './features/market/components/layout/AppContent';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
+import './index.css';
 
 function App() {
   useSocket();

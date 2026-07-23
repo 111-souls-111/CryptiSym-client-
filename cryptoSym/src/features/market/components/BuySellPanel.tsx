@@ -30,10 +30,9 @@ export const BuySellPanel = () => {
   const coinDisplayName = coinId.charAt(0).toUpperCase() + coinId.slice(1);
   const isPriceUp = change24h >= 0;
 
-  // Обработчик клика по кнопке "Pay"
   const handlePay = async () => {
     if (!quantity || quantity < 0.00000001) {
-      message.warning('Quantity must be at least 0.00000001');
+      message.warning(t("common.count"));
       return;
     }
 
@@ -127,7 +126,7 @@ export const BuySellPanel = () => {
         </Flex>
       </Card>
 
-      {/* Поле ввода количества (Quantity) */}
+
       <div style={{ margin: '16px 0 8px 0' }}>
         <Text type="secondary" style={{ display: 'block', marginBottom: '6px', fontSize: '11px', textTransform: 'uppercase' }}>
           {t("trade.amountBuy")}{tradeType}
@@ -146,7 +145,7 @@ export const BuySellPanel = () => {
         className={styles.payButton} 
         onClick={handlePay}
         loading={isSubmitting}
-        disabled={!quantity || quantity <= 0}
+        // disabled={!quantity || quantity <= 0}
       >
       {t('trade.pay')}
       </Button>
