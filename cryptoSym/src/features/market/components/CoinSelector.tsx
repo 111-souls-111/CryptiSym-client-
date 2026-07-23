@@ -11,7 +11,7 @@ export const CoinSelector = () => {
   const coins = useSelector((state: RootState) => state.market.coinsList);
   // const currentCoin = useSelector((state: RootState) => state.market.selectedCoinId)
   const handleChange = (selectedOption: SelectedCoin) => {
-  dispatch(changeSelectedCoin(selectedOption.value));
+    dispatch(changeSelectedCoin(selectedOption.value));
   };
 
   return (
@@ -24,8 +24,8 @@ export const CoinSelector = () => {
         }))}
         onChange={handleChange}
         placeholder="Bitcoin (BTC)"
-                    dropdownStyle={{
-        backgroundColor: 'orange',
+        dropdownStyle={{
+          backgroundColor: 'orange',
         }}
       />
     </div>

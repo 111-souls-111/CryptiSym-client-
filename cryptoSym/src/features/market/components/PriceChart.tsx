@@ -17,7 +17,7 @@ export const PriceChart: React.FC = () => {
   const priceHistory = useSelector((state: RootState) => state.market.priceHistory);
   //   const selectedCoinId = useSelector((state: RootState) => state.market.selectedCoinId);
   const currentPrice = useSelector((state: RootState) => state.market.currentPrice);
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <div>

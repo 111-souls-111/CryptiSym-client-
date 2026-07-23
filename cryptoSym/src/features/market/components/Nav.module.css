@@ -5,7 +5,7 @@
 }
 
 .navLink {
-  color:  var(--nav-orange);
+  color: var(--nav-orange);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -18,38 +18,34 @@
   transition: color 0.2s ease;
 }
 
-
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.Avatar{
+.Avatar {
   color: var(--nav-orange);
 }
 
-.Avatar:hover{
+.Avatar:hover {
   color: var(--white-color);
 }
-.replenishmentButton{
-  background-color:  var(--nav-orange);
+.replenishmentButton {
+  background-color: var(--nav-orange);
   color: var(--accent-color);
   margin-right: 10px;
 }
 
-.replenishmentButton:hover{
+.replenishmentButton:hover {
   background-color: var(--nav-orange) !important;
-  color:  var(--white-color) !important;
+  color: var(--white-color) !important;
 }
 
-.langSelect{
-  background-color:  var(--nav-orange);
+.langSelect {
+  background-color: var(--nav-orange);
   color: black;
   width: 113px !important;
   height: 32px;
   margin: 20px;
-  border: none
-  
+  border: none;
 }
-
-

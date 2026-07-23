@@ -4,18 +4,12 @@
   background: var(--primary-color);
   border-radius: 16px;
   color: var(--white-color);
-  margin: 30px
-  
+  margin: 30px;
 }
 
 .actionButtons {
   margin-bottom: 24px;
- 
 }
-
-
-
-
 
 .balanceSection {
   margin-bottom: 20px;
@@ -29,7 +23,6 @@
   font-size: 50px !important;
   font-weight: 700 !important;
   text-align: start;
-
 }
 
 .bitcoinLabel {
@@ -44,8 +37,6 @@
   border-radius: 12px;
   margin-bottom: 24px;
   padding: 20px 20px;
-  
-  
 }
 
 .priceCard :global(.ant-card-body) {
@@ -60,7 +51,7 @@
   color: var(--white-color) !important;
 }
 
-.currentPrice{
+.currentPrice {
   color: var(--white-color) !important;
 }
 
@@ -70,10 +61,9 @@
   font-weight: 700 !important;
 }
 
-.currency{
+.currency {
   color: var(--white-color) !important;
 }
-
 
 .payButton {
   background: var(--accent-color);
@@ -94,9 +84,7 @@
   color: var(--accent-color) !important;
 }
 
-
-
-.activeSellBuyButton{
+.activeSellBuyButton {
   background: var(--white-color) !important;
   color: var(--accent-color);
   border: 0px;
@@ -116,9 +104,7 @@
   font-weight: 600;
   font-size: 16px;
   flex: 0.3;
-
 }
-
 
 .sellBuyButton:hover {
   background: var(--grey-color) !important;
@@ -127,8 +113,7 @@
 }
 
 .activeSellBuyButton:hover {
-  background: var(--dark-white-color) !important; 
+  background: var(--dark-white-color) !important;
   border: none !important;
   color: var(--white-color) !important;
 }
-
