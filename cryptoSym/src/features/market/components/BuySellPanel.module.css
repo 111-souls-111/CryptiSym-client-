@@ -81,7 +81,7 @@
 .payButton:hover {
   background: var(--grey-color) !important;
   border: none !important;
-  color: var(--accent-color) !important;
+  color: var(--white-color) !important;
 }
 
 .activeSellBuyButton {

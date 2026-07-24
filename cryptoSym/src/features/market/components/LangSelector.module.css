@@ -1,0 +1,10 @@
+
+.langSelect {
+  background-color: var(--nav-orange);
+  color: var(--accent-color);
+  width: 113px !important;
+  height: 32px;
+  margin: 20px;
+  border: none;
+  width: 150px;
+}

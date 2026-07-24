@@ -4,7 +4,7 @@ import { BuySellPanel } from '../BuySellPanel';
 
 export const AppSider = () => {
   return (
-    <Layout.Sider width="25%" className={styles.sider} style={{ background: '#000000' }}>
+    <Layout.Sider width='25%' className={styles.sider}>
       <BuySellPanel />
     </Layout.Sider>
   );

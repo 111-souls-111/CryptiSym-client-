@@ -25,17 +25,17 @@ export const PriceChart: React.FC = () => {
         <span>{currentPrice} $</span>
       </div>
 
-      <div className={styles.chartContainer} style={{ width: '100%', height: 450 }}>
+      <div style={{ width: '100%', height: 450 }}>
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={priceHistory} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#fa8c16" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#fa8c16" stopOpacity={0} />
+                <stop offset="5%" stopColor=" var(--primary-color) " stopOpacity={0.3} />
+                <stop offset="95%" stopColor=" var(--primary-color) " stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-            <XAxis dataKey="time" stroke="#666" fontSize={12} />
+            <CartesianGrid strokeDasharray="3 3" stroke="var( --border-color) " />
+            <XAxis dataKey="time" stroke="var(--border-color)" fontSize={12} />
             <YAxis
               domain={['dataMin - 5', 'dataMax + 5']}
               stroke="#666"
@@ -44,9 +44,9 @@ export const PriceChart: React.FC = () => {
             />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#262626',
-                borderColor: '#434343',
-                color: '#fff',
+                backgroundColor: ' var(--header-color) ',
+                borderColor: ' var(--border-color)',
+                color: 'var(--white-color) ',
                 height: '50px',
               }}
               formatter={(value: any) => [`$${value.toFixed(2)}, $${t('chart.price')}`]}
@@ -54,7 +54,7 @@ export const PriceChart: React.FC = () => {
             <Area
               type="monotone"
               dataKey="price"
-              stroke="#fa8c16"
+              stroke=" var(--primary-color) "
               strokeWidth={2}
               fillOpacity={1}
               fill="url(#colorPrice)"

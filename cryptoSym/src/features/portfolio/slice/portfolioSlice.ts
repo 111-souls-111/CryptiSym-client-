@@ -54,7 +54,7 @@ const portfolioSlice = createSlice({
   name: 'portfolio',
   initialState,
   reducers: {
-    // Сюда можно добавить экшен инициализации портфеля при загрузке страницы
+
   },
   extraReducers: builder => {
     builder

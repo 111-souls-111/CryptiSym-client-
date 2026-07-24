@@ -1,17 +1,29 @@
 .active {
   color: var(--white-color);
-  border-color: var(--white-color) !important;
+  border-color: var(--primary-color) !important;
   background-color: var(--nav-orange) !important ;
 
 }
 
 .notActive {
   color: var(--dark-white-color);
-  border-color: var(--white-color) !important;
+  border-color: var(--grey-color) !important;
   background-color: var(--grey-color) !important;
 }
 
 .container {
   margin-left: 20px;
+}
+
+.notActive:hover {
+  color: var(--dark-white-color);
+  border-color: var(--grey-color) !important;
+  background-color: var(--border-color) !important;
+}
+
+.active:hover {
+  color: var(--dark-white-color);
+  border-color: var(--grey-color) !important;
+  background-color: var(--primary-color) !important;
 }
 

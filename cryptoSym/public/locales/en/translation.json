@@ -3,10 +3,13 @@
     "welcome": "Welcome to CryptiSym",
     "loading": "Loading...",
     "count": "Quantity must be at least 0.00000001",
-    "error": "Error",
-    "success": "Success",
+    "systemError":"System error occurred",
+    "orderError": "Order execution error",
+    "orderSuccess": "The order has been successfully executed",
+    "notCoin": "Not enough  in your portfolio ",
     "cancel": "Cancel",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "insufficient": "Insufficient funds for this transaction"
   },
   "auth": {
     "login": "Login",

@@ -30,7 +30,6 @@ export const TimeFramePanel: React.FC = () => {
           <Radio.Button
             key={tf.value}
             value={tf.value}
-  
             className={currentTimeFrame === tf.value ? styles.active : styles.notActive}
           >
             {tf.label}

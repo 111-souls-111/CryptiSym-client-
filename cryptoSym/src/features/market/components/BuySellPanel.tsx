@@ -37,12 +37,12 @@ export const BuySellPanel = () => {
     }
 
     if (tradeType === 'Buy' && quantity * currentPrice > balanceUsdc) {
-      message.error('Insufficient funds for this transaction');
+      message.error(t('common.insufficient'));
       return;
     }
 
     if (tradeType === 'Sell' && quantity > ownedQuantity) {
-      message.error(`Not enough ${coinDisplayName} in your portfolio`);
+      message.error(`${t("commom.notCoin")} ${coinDisplayName}`);
       return;
     }
 
@@ -56,14 +56,14 @@ export const BuySellPanel = () => {
       );
 
       if (executeTrade.fulfilled.match(resultAction)) {
-        message.success('Ордер успешно исполнен');
+        message.success(t("commom.orderSuccess"));
         setQuantity(null);
       } else {
-        message.error((resultAction.payload as string) || 'Ошибка при исполнении ордера');
+        message.error((resultAction.payload as string) || t('common.orderError'));
       }
 
     } catch (err) {
-      message.error('System error occurred');
+      message.error(t('common.systemError'));
     }
   };
 
@@ -142,7 +142,7 @@ export const BuySellPanel = () => {
           className={styles.amount}
         >
           {t('trade.amountBuy')}
-          {tradeType}
+          {tradeType === t('trade.buy') ?t('trade.buy'):t('trade.sell')}
         </Text>
         <InputNumber
           min={0.00000001}
