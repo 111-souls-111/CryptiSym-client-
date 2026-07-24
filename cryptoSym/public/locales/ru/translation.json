@@ -45,7 +45,7 @@
     "transaction": "Транзакции",
     "replenishment": "Пополнение"
   },
-  "Chart": {
+  "chart": {
     "price": "Цена"
   }
 }

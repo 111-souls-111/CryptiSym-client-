@@ -49,7 +49,7 @@ export const PriceChart: React.FC = () => {
                 color: 'var(--white-color) ',
                 height: '50px',
               }}
-              formatter={(value: any) => [`$${value.toFixed(2)}, $${t('chart.price')}`]}
+              formatter={(value: any) => [` ${t('chart.price')}: $${value.toFixed(2)}`]}
             />
             <Area
               type="monotone"
