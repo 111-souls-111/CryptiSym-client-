@@ -5,17 +5,19 @@ import { changeTimeFrame } from '../slices/marketSlice';
 import { type RootState } from '../../../app/store';
 import styles from './TimeFramePanel.module.css';
 import { type TimeFrame } from '../types';
+import { useTranslation } from 'react-i18next';
 
 export const TimeFramePanel: React.FC = () => {
   const dispatch = useDispatch();
   const currentTimeFrame = useSelector((state: RootState) => state.market.selectedTimeFrame);
+  const { t } = useTranslation()
 
   const timeFrames: { value: TimeFrame; label: string }[] = [
-    { value: '24h', label: 'day' },
-    { value: '1h', label: '1h' },
-    { value: '7d', label: '7d' },
-    { value: '30d', label: '30d' },
-    { value: '1y', label: '1y' },
+    { value: '24h', label: t('time.day') },
+    { value: '1h', label: t('time.hour') },
+    { value: '7d', label: t('time.week') },
+    { value: '30d', label: t('time.month') },
+    { value: '1y', label: t('time.year') },
   ];
 
   return (

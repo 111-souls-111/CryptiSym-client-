@@ -47,5 +47,13 @@
   },
   "chart": {
     "price": "Price"
+    
+  },
+  "time":{
+    "day": "day",
+    "hour": "hour",
+    "week": "week",
+    "month": "month",
+    "year": "year"
   }
 }

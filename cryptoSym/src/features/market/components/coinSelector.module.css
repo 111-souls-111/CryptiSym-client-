@@ -1,8 +1,7 @@
 .coinSelect {
   color: var(--primary-color) !important;
   background-color: var(--prymary-color) !important;
-
-  width: 200;
+  width: 300;
   margin: 20px;
   border: none;
 }
