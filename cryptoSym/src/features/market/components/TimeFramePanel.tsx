@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 export const TimeFramePanel: React.FC = () => {
   const dispatch = useDispatch();
   const currentTimeFrame = useSelector((state: RootState) => state.market.selectedTimeFrame);
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const timeFrames: { value: TimeFrame; label: string }[] = [
     { value: '24h', label: t('time.day') },

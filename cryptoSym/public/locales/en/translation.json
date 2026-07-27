@@ -3,7 +3,7 @@
     "welcome": "Welcome to CryptiSym",
     "loading": "Loading...",
     "count": "Quantity must be at least 0.00000001",
-    "systemError":"System error occurred",
+    "systemError": "System error occurred",
     "orderError": "Order execution error",
     "orderSuccess": "The order has been successfully executed",
     "notCoin": "Not enough  in your portfolio ",
@@ -47,9 +47,8 @@
   },
   "chart": {
     "price": "Price"
-    
   },
-  "time":{
+  "time": {
     "day": "day",
     "hour": "hour",
     "week": "week",

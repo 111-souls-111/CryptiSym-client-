@@ -53,9 +53,7 @@ export const executeTrade = createAsyncThunk<
 const portfolioSlice = createSlice({
   name: 'portfolio',
   initialState,
-  reducers: {
-
-  },
+  reducers: {},
   extraReducers: builder => {
     builder
       .addCase(executeTrade.pending, state => {

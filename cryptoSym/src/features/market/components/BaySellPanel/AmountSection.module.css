@@ -1,0 +1,16 @@
+.amount {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white-color) !important;
+}
+
+.amountInput {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.amountSection {
+  margin: 16px 0 8px 0;
+}

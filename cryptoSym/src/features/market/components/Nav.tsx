@@ -25,15 +25,13 @@ export const Nav = () => {
       </nav>
 
       <div className={styles.UserWrapper}>
-
         <LangSelector />
-        
+
         <Button className={styles.replenishmentButton} type="primary">
           {t('nav.replenishment')}
         </Button>
         <Avatar className={styles.Avatar} size={64} icon={<UserOutlined />} />
       </div>
-
     </div>
   );
 };

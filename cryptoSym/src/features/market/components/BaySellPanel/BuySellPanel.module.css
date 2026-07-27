@@ -1,0 +1,64 @@
+/* BuySellPanel.module.css */
+
+.siderCard {
+  background: var(--primary-color);
+  border-radius: 16px;
+  color: var(--white-color);
+  margin: 30px;
+}
+
+.actionButtons {
+  margin-bottom: 24px;
+}
+.payButton {
+  background: var(--accent-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 8px;
+  height: 48px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.payButton:hover {
+  background: var(--grey-color) !important;
+  border: none !important;
+  color: var(--white-color) !important;
+}
+
+.activeSellBuyButton {
+  background: var(--white-color) !important;
+  color: var(--accent-color);
+  border: 0px;
+  border-radius: 16px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 0.3;
+}
+
+.sellBuyButton {
+  background: var(--accent-color);
+  color: var(--white-color);
+  border: 0px;
+  border-radius: 16px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 16px;
+  flex: 0.3;
+}
+
+.sellBuyButton:hover {
+  background: var(--grey-color) !important;
+  border: none !important;
+  color: var(--white-color) !important;
+}
+
+.activeSellBuyButton:hover {
+  background: var(--dark-white-color) !important;
+  border: none !important;
+  color: var(--white-color) !important;
+}

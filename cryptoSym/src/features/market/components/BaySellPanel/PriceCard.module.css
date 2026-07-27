@@ -1,0 +1,42 @@
+.priceCard {
+  background: var(--accent-color) !important;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  padding: 20px 20px;
+}
+
+.priceCard :global(.ant-card-body) {
+  padding: 0;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+  color: var(--white-color) !important;
+}
+
+.currentPrice {
+  color: var(--white-color) !important;
+}
+
+.priceValue {
+  color: var(--white-color) !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+}
+
+.currency {
+  color: var(--white-color) !important;
+}
+
+.arrowUp {
+  color: var(--arrow-green);
+  font-size: 14px;
+}
+
+.arrowDown {
+  color: var(--arrow-red);
+  font-size: 14px;
+}

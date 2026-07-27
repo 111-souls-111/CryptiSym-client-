@@ -1,5 +1,5 @@
-export interface LangTypes{
-    code: string;
-    label: string;
-    flag: string;
+export interface LangTypes {
+  code: string;
+  label: string;
+  flag: string;
 }

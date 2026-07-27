@@ -3,8 +3,6 @@ import { type ChartPoint } from './charts';
 import { type VolumePoint } from './charts';
 import { type TimeFrame } from './charts';
 
-
-
 export interface MarketState {
   selectedTimeFrame: TimeFrame;
   coinsList: CoinsInfo[];

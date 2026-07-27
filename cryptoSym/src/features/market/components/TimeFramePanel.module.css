@@ -2,7 +2,6 @@
   color: var(--white-color);
   border-color: var(--primary-color) !important;
   background-color: var(--nav-orange) !important ;
-
 }
 
 .notActive {
@@ -26,4 +25,3 @@
   border-color: var(--grey-color) !important;
   background-color: var(--primary-color) !important;
 }
-
