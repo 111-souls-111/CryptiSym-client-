@@ -9,7 +9,7 @@ import {
   Tooltip,
   CartesianGrid,
 } from 'recharts';
-import { type RootState } from '../../../app/store';
+import { type RootState } from '../../../../app/store';
 import styles from './PriceChart.module.css';
 import { useTranslation } from 'react-i18next';
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Radio } from 'antd';
-import { changeTimeFrame } from '../slices/marketSlice';
-import { type RootState } from '../../../app/store';
+import { changeTimeFrame } from '../../slices/marketSlice';
+import { type RootState } from '../../../../app/store';
 import styles from './TimeFramePanel.module.css';
-import { type TimeFrame } from '../types';
+import { type TimeFrame } from '../../types';
 import { useTranslation } from 'react-i18next';
 
 export const TimeFramePanel: React.FC = () => {

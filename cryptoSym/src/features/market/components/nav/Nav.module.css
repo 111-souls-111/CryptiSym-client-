@@ -1,0 +1,250 @@
+/* Основной контейнер */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 64px;
+  padding: 0 24px;
+  background: var(--header-color);
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.desktopMenu :global(.ant-menu-item) {
+  color: var(--primary-color) !important;
+}
+
+.desktopMenu :global(.ant-menu-item:hover) {
+  color: var(--primary-color) !important;
+
+}
+
+
+.logo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.desktopMenu {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border-bottom: none;
+  line-height: 64px;
+}
+
+.userWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.replenishmentButton {
+  white-space: nowrap;
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color);
+}
+
+
+
+.avatar {
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: var(--accent-color) !important;
+  color: var(--primary-color)
+}
+
+.avatar:hover {
+  cursor: pointer;
+  flex-shrink: 0;
+  background-color: var(--accent-color) !important;
+  color: var(--white-color)
+}
+
+.burgerButton {
+  display: none;
+  color: var(--primary-color) !important;
+  font-size: 20px;
+}
+
+.burgerButton:hover {
+  color: var(--white-color) !important;
+}
+
+/* ============================================ */
+/* Мобильный Drawer */
+/* ============================================ */
+
+
+.mobileContent {
+  padding: 16px 0;
+}
+
+.mobileHeader {
+  padding: 0 20px 16px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobileLogo {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Мобильное меню */
+
+.mobileReplenishmentButton {
+  white-space: nowrap;
+  background-color: var(--primary-color) !important;
+  color: var(--accent-color);
+  border:none;
+}
+
+.mobileReplenishmentButton:hover {
+  white-space: nowrap;
+  background-color: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  border:none !important;
+}
+
+
+.mobileMenu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.mobileMenu :global(.ant-menu-item) {
+  color: var(--primary-color) !important;
+}
+
+.mobileMenu :global(.ant-menu-item:hover) {
+  color: var(--white-color) !important;
+  background: var(--border-color) !important;
+}
+
+.mobileMenu :global(.ant-menu-item-selected) {
+  color: var(--white-color) !important;
+  background: var(--header-color) !important;
+}
+
+.mobileMenu :global(.ant-menu-item a:hover) {
+  color: inherit !important;
+}
+
+.mobileMenu :global(.ant-menu-item .anticon) {
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.mobileMenu :global(.ant-menu-item-divider) {
+  border-color: var(--border-color) !important;
+  margin: 8px 0 !important;
+}
+
+.mobileMenu :global(.ant-menu-item-disabled) {
+  cursor: default !important;
+  opacity: 1 !important;
+  padding: 8px 20px !important;
+  height: auto !important;
+  line-height: normal !important;
+  background: transparent !important;
+}
+
+.mobileMenu :global(.ant-menu-item-disabled .ant-btn) {
+  width: 100%;
+}
+
+
+
+/* АДАПТИВНОСТЬ */
+
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .logoWrapper {
+    margin-right: 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .replenishmentButton {
+    font-size: 13px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 12px;
+    height: 56px;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .burgerButton {
+    display: inline-flex;
+  }
+
+  .replenishmentButton {
+    display: none;
+  }
+
+  .avatar {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .userWrapper {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 8px;
+    height: 48px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .avatar {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+  }
+
+  .userWrapper {
+    gap: 6px;
+  }
+
+  .burgerButton {
+    padding: 4px 8px !important;
+  }
+
+  .burgerButton :global(.anticon) {
+    font-size: 18px !important;
+  }
+}

@@ -1,12 +1,11 @@
+
 .header {
-  padding: 0 20px;
-  height: 60;
-  background-color: var(--header-color);
-  border-bottom: 1px solid var(--grey-color);
+  background: var(--header-color);
+  padding: 0;
+  height: auto;
 }
 
 .navWrapper {
-  color: var(--nav-orange);
-  font-weight: bold;
-  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
 }

@@ -1,8 +1,8 @@
 import { Layout } from 'antd';
-import { CoinSelector } from '../CoinSelector';
-import { PriceChart } from '../PriceChart';
+import { CoinSelector } from '../../components/chartsSection/CoinSelector';
+import { PriceChart } from '../../components/chartsSection/PriceChart';
 import { AppSider } from './AppSider';
-import { TimeFramePanel } from '../TimeFramePanel';
+import { TimeFramePanel } from '../../components/chartsSection/TimeFramePanel';
 import styles from './AppContent.module.css';
 
 const { Content } = Layout;
