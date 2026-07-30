@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Nav.module.css';
-import { 
-  UserOutlined, 
-  MenuOutlined, 
+import {
+  UserOutlined,
+  MenuOutlined,
   ShopOutlined,
   WalletOutlined,
-  SwapOutlined 
+  SwapOutlined,
 } from '@ant-design/icons';
-import { Button, Avatar, Menu, Drawer} from 'antd';
+import { Button, Avatar, Menu, Drawer } from 'antd';
 import type { MenuProps } from 'antd';
 import { useTranslation } from 'react-i18next';
 import 'flag-icons/css/flag-icons.min.css';
@@ -38,7 +38,6 @@ export const Nav = () => {
     },
   ];
 
-
   const mobileMenuItems: MenuProps['items'] = [
     ...menuItems,
     {
@@ -47,7 +46,7 @@ export const Nav = () => {
     {
       key: 'replenishment',
       label: (
-        <Button className={styles.mobileReplenishmentButton}block>
+        <Button className={styles.mobileReplenishmentButton} block>
           {t('nav.replenishment')}
         </Button>
       ),
@@ -77,16 +76,12 @@ export const Nav = () => {
         <Button className={styles.replenishmentButton} type="primary">
           {t('nav.replenishment')}
         </Button>
-        
-        <Avatar 
-          className={styles.avatar} 
-          size={40} 
-          icon={<UserOutlined />} 
-        />
+
+        <Avatar className={styles.avatar} size={40} icon={<UserOutlined />} />
         <Button
           className={styles.burgerButton}
           type="text"
-          icon={<MenuOutlined/>}
+          icon={<MenuOutlined />}
           onClick={() => setMobileMenuOpen(true)}
         />
       </div>
@@ -103,12 +98,12 @@ export const Nav = () => {
         <div className={styles.mobileContent}>
           <div className={styles.mobileHeader}>
             <h3 className={styles.mobileLogo}>CryptoSym</h3>
-                 <Button
-          className={styles.burgerButton}
-          type="text"
-          icon={<MenuOutlined/>}
-          onClick={() => setMobileMenuOpen(false)}
-        />
+            <Button
+              className={styles.burgerButton}
+              type="text"
+              icon={<MenuOutlined />}
+              onClick={() => setMobileMenuOpen(false)}
+            />
           </div>
           <Menu
             className={styles.mobileMenu}
