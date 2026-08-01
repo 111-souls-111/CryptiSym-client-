@@ -1,5 +1,5 @@
 .langSelect {
-  background-color: var(--nav-orange);
+  background-color: var(--primary-color);
   color: var(--accent-color);
   width: 113px !important;
   height: 32px;

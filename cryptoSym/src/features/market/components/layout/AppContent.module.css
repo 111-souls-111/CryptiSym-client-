@@ -4,3 +4,53 @@
   color: var(--white-color);
   background-color: var(--accent-color);
 }
+
+
+.buttonWrapper{
+  display: none;
+}
+@media (max-width: 900px){
+  .BuySellButton{
+}
+
+.buttonWrapper{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 20px;
+
+
+  /* background-color: var(--primary-color); */
+  
+}
+}
+.content {
+  /* ваш существующий стиль */
+}
+
+.hidden  {
+  display: none !important;
+}
+
+.buySellButton {
+  width: 50%;
+  text-align: center;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--white-color);
+}
+
+.buySellButton:hover {
+  width: 50%;
+  text-align: center;
+  background-color: var(--white-color);
+  border: none;
+  color: var(--primary-color);
+}
+
+.selectorWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+

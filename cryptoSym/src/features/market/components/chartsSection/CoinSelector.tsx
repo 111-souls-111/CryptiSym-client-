@@ -5,7 +5,11 @@ import { Select } from 'antd';
 import { useEffect } from 'react';
 import styles from './coinSelector.module.css';
 
-export const CoinSelector = () => {
+interface CoinSelectorProps{
+  active: boolean
+}
+
+export const CoinSelector = ({active}:CoinSelectorProps) => {
   const dispatch = useDispatch();
   const coins = useSelector((state: RootState) => state.market.coinsList);
   const currentCoin = useSelector((state: RootState) => state.market.selectedCoinId);
@@ -21,7 +25,7 @@ export const CoinSelector = () => {
   };
 
   return (
-    <div>
+    <div >
       <Select
         className={styles.coinSelect}
         value={currentCoin || coins[0]?.id}
