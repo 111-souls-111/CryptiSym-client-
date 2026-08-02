@@ -20,7 +20,7 @@ export interface currentCoins {
   time_range?: string;
   charts: {
     price_line: ChartPoint[];
-    volume_bar: VolumePoint[];
+    volume_line: VolumePoint[];
   };
 }
 

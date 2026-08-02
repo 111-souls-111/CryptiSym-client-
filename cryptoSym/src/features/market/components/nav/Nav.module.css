@@ -85,7 +85,6 @@
 }
 /* Мобильный*/
 
-
 .mobileContent {
   padding: 16px 0;
 }
@@ -136,8 +135,6 @@
   background: var(--header-color) !important;
 }
 
-
-
 .mobileMenu :global(.ant-menu-item a:hover) {
   color: inherit !important;
 }
@@ -146,7 +143,6 @@
   font-size: 18px;
   margin-right: 12px;
 }
-
 
 @media (max-width: 992px) {
   .wrapper {

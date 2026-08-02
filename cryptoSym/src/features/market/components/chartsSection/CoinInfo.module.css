@@ -1,0 +1,41 @@
+.priceInfo{
+    display: flex;
+    color:  var(--primary-color);
+    align-items:center;
+    padding-bottom:10px
+   
+}
+
+.priceRow{
+    height: 10px
+}
+
+.priceLabel{
+    font-size:20px
+}
+
+.up{
+    color: var(--arrow-green);
+    background-color: green;
+    border-radius: 15px;
+    margin-left: 5px
+}
+
+.down{
+    color: var(--arrow-red);
+    background-color: red;
+    border-radius: 15px;
+    margin-left: 5px
+}
+
+.priceRow{
+    padding-left:5px
+}
+
+.priceChange{
+    margin-left: 10px,
+}
+
+.priceValue{
+    color: var(--white-color)
+}

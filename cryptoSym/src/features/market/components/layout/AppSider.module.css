@@ -27,7 +27,7 @@
   .sider {
     display: none;
   }
-  
+
   .sider.mobileOpen {
     display: flex !important;
     position: fixed !important;

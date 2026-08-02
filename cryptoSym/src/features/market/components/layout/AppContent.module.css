@@ -3,32 +3,30 @@
   min-height: calc(100vh - 60px);
   color: var(--white-color);
   background-color: var(--accent-color);
+  padding-left:20px
 }
 
-
-.buttonWrapper{
+.buttonWrapper {
   display: none;
 }
-@media (max-width: 900px){
-  .BuySellButton{
-}
+@media (max-width: 900px) {
+  .BuySellButton {
+  }
 
-.buttonWrapper{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding-top: 20px;
+  .buttonWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
 
-
-  /* background-color: var(--primary-color); */
-  
-}
+    /* background-color: var(--primary-color); */
+  }
 }
 .content {
   /* ваш существующий стиль */
 }
 
-.hidden  {
+.hidden {
   display: none !important;
 }
 
@@ -48,9 +46,8 @@
   color: var(--primary-color);
 }
 
-.selectorWrapper{
+.selectorWrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-

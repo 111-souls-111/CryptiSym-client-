@@ -4,26 +4,26 @@ import { PriceChart } from '../../components/chartsSection/PriceChart';
 import { AppSider } from './AppSider';
 import { TimeFramePanel } from '../../components/chartsSection/TimeFramePanel';
 import styles from './AppContent.module.css';
-import { Route, Routes } from 'react-router-dom';
 import { Button } from 'antd/es/radio';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import { ProductChart}  from '../chartsSection/ProductChart'
+import { CoinInfo } from '../chartsSection/CoinInfo';
 const { Content } = Layout;
 
 export const AppContent = () => {
   const [activeSider, setActiveSider] = useState(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth <= 900;
       setIsMobile(mobile);
       if (!mobile) {
-        setMobileOpen(false); 
-        setActiveSider(true); 
+        setMobileOpen(false);
+        setActiveSider(true);
       }
     };
     window.addEventListener('resize', handleResize);
@@ -32,12 +32,10 @@ export const AppContent = () => {
 
   const handleSiderToggle = () => {
     if (isMobile) {
-   
       setMobileOpen(!mobileOpen);
 
       setActiveSider(false);
     } else {
-
       setActiveSider(!activeSider);
     }
   };
@@ -52,25 +50,20 @@ export const AppContent = () => {
   return (
     <>
       <Content className={`${styles.content} ${hideContent ? styles.hidden : ''}`}>
-        <CoinSelector active={activeSider} />
-        <Routes>
-          <Route path='/' element={<PriceChart/>} />
-        </Routes>
-        <TimeFramePanel/>
+        <CoinSelector />
+        <CoinInfo />
+        <PriceChart />
+        <ProductChart />
+        <TimeFramePanel />
         <div className={styles.buttonWrapper}>
-          <Button 
-            className={styles.buySellButton} 
-            onClick={handleSiderToggle}
-          >
+          <Button className={styles.buySellButton} onClick={handleSiderToggle}>
             {`${t('trade.buy')}/${t('trade.pay')}`}
           </Button>
         </div>
       </Content>
-
-      {/* Сайдбар */}
-      <AppSider 
-        sider={!isMobile && activeSider}  
-        mobileOpen={isMobile && mobileOpen}  
+      <AppSider
+        sider={!isMobile && activeSider}
+        mobileOpen={isMobile && mobileOpen}
         onClose={handleCloseSider}
       />
     </>

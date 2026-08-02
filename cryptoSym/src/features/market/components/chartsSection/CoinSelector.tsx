@@ -5,11 +5,9 @@ import { Select } from 'antd';
 import { useEffect } from 'react';
 import styles from './coinSelector.module.css';
 
-interface CoinSelectorProps{
-  active: boolean
-}
 
-export const CoinSelector = ({active}:CoinSelectorProps) => {
+
+export const CoinSelector = () => {
   const dispatch = useDispatch();
   const coins = useSelector((state: RootState) => state.market.coinsList);
   const currentCoin = useSelector((state: RootState) => state.market.selectedCoinId);
@@ -25,10 +23,10 @@ export const CoinSelector = ({active}:CoinSelectorProps) => {
   };
 
   return (
-    <div >
+    <div>
       <Select
         className={styles.coinSelect}
-        value={currentCoin || coins[0]?.id}
+        value={currentCoin || coins[0]?.id.charAt(0).toLocaleUpperCase + coins[0]?.id.slice(1)}
         options={coins.map(coin => ({
           label: coin.name.charAt(0).toLocaleUpperCase() + coin.name.slice(1),
           value: coin.id,

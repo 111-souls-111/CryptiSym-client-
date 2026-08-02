@@ -9,7 +9,9 @@
     "notCoin": "Not enough  in your portfolio ",
     "cancel": "Cancel",
     "confirm": "Confirm",
-    "insufficient": "Insufficient funds for this transaction"
+    "insufficient": "Insufficient funds for this transaction",
+    "noData": "No data",
+    "waitingForData": "Waiting for data"
   },
   "auth": {
     "login": "Login",
@@ -46,7 +48,8 @@
     "replenishment": "Replenishment"
   },
   "chart": {
-    "price": "Price"
+    "price": "Price",
+    "volume": "Volume"
   },
   "time": {
     "day": "day",
