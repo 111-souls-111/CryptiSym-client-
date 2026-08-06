@@ -10,21 +10,15 @@
   display: none;
 }
 @media (max-width: 900px) {
-  .BuySellButton {
-  }
 
   .buttonWrapper {
     display: flex;
     width: 100%;
     justify-content: center;
     padding-top: 20px;
-
-    /* background-color: var(--primary-color); */
   }
 }
-.content {
-  /* ваш существующий стиль */
-}
+
 
 .hidden {
   display: none !important;
