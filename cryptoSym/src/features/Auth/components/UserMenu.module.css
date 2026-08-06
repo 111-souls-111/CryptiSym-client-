@@ -1,0 +1,17 @@
+.avatar {
+  cursor: pointer;
+  flex-shrink: 0;
+  /* background-color: var(--accent-color) !important; */
+  color: var(--primary-color);
+}
+
+.avatar:hover {
+  cursor: pointer;
+  flex-shrink: 0;
+  /* background-color: var(--accent-color) !important; */
+  color: var(--white-color);
+}
+
+.userName{
+    color: var(--primary-color);
+}

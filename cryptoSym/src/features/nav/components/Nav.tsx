@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Nav.module.css';
 import {
-  UserOutlined,
   MenuOutlined,
   ShopOutlined,
   WalletOutlined,
   SwapOutlined,
 } from '@ant-design/icons';
-import { Button, Avatar, Menu, Drawer } from 'antd';
+import { Button, Menu, Drawer } from 'antd';
+import UserMenu from '../../Auth/components/UserMenu';
 import type { MenuProps } from 'antd';
 import { useTranslation } from 'react-i18next';
 import 'flag-icons/css/flag-icons.min.css';
@@ -21,6 +21,10 @@ export const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems: MenuProps['items'] = [
+        {
+      key: 'avatar',
+      label: <UserMenu />,
+    },
     {
       key: '/',
       label: <Link to="/">{t('nav.store')}</Link>,
@@ -36,6 +40,7 @@ export const Nav = () => {
       label: <Link to="/products">{t('nav.transaction')}</Link>,
       icon: <SwapOutlined />,
     },
+    
   ];
 
   const mobileMenuItems: MenuProps['items'] = [
@@ -77,7 +82,7 @@ export const Nav = () => {
           {t('nav.replenishment')}
         </Button>
 
-        <Avatar className={styles.avatar} size={40} icon={<UserOutlined />} />
+         
         <Button
           className={styles.burgerButton}
           type="text"

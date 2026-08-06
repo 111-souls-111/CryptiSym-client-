@@ -5,6 +5,7 @@ import { Navigate } from 'react-router-dom';
 import styles from './LoginPage.module.css';
 import { useTranslation } from 'react-i18next';
 import LoadingSpin from './LoadingSpin';
+import { LangSelector } from '../../nav/components/LangSelector';
 
 const { Title, Text } = Typography;
 
@@ -31,6 +32,7 @@ export const LoginPage = () => {
           <div className={styles.logo}>
             <Title level={2}>CryptoSym</Title>
             <Text type="secondary">{t("auth.loginInfo")}</Text>
+            <LangSelector />
           </div>
 
           <Button
