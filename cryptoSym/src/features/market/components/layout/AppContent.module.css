@@ -3,7 +3,7 @@
   min-height: calc(100vh - 60px);
   color: var(--white-color);
   background-color: var(--accent-color);
-  padding-left:20px
+  padding-left: 20px;
 }
 
 .buttonWrapper {

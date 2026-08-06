@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Контракт на отправку (TradeRequest)
 interface TradeRequest {
   coin_id: string;
   type: string;

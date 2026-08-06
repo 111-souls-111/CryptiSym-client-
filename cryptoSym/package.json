@@ -15,6 +15,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.3.2",
     "@reduxjs/toolkit": "^2.12.0",
+    "@zitadel/react-auth": "^1.2.1",
     "antd": "^6.5.0",
     "axios": "^1.18.1",
     "flag-icons": "^7.5.0",
@@ -22,6 +23,7 @@
     "i18next-browser-languagedetector": "^8.2.1",
     "i18next-http-backend": "^4.0.0",
     "lightweight-charts": "^5.2.0",
+    "oidc-client-ts": "^3.5.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-i18next": "^17.0.10",

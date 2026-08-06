@@ -7,7 +7,7 @@ import styles from './AppContent.module.css';
 import { Button } from 'antd/es/radio';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ProductChart}  from '../chartsSection/ProductChart'
+import { ProductChart } from '../chartsSection/ProductChart';
 import { CoinInfo } from '../chartsSection/CoinInfo';
 const { Content } = Layout;
 

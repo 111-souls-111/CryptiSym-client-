@@ -10,7 +10,7 @@ import {
   Tooltip,
   CartesianGrid,
   Legend,
-  Cell
+  Cell,
 } from 'recharts';
 import { type RootState } from '../../../../app/store';
 import styles from './CombinedChart.module.css';
@@ -66,22 +66,17 @@ export const CombinedChart: React.FC = () => {
     <div className={styles.chartContainer}>
       <div className={styles.chartsHeader}>
         <div className={styles.priceInfo}>
-          <span className={styles.priceLabel}>
-            {t('chart.price') || 'Цена'}
-          </span>
+          <span className={styles.priceLabel}>{t('chart.price') || 'Цена'}</span>
           <div className={styles.priceRow}>
-            <span className={styles.priceValue}>
-              ${(currentPrice || lastPrice).toFixed(2)}
-            </span>
+            <span className={styles.priceValue}>${(currentPrice || lastPrice).toFixed(2)}</span>
             <span className={`${styles.priceChange} ${isUp ? styles.up : styles.down}`}>
-              {isUp ? '+' : ''}{priceChange.toFixed(2)} ({priceChangePercent.toFixed(2)}%)
+              {isUp ? '+' : ''}
+              {priceChange.toFixed(2)} ({priceChangePercent.toFixed(2)}%)
             </span>
           </div>
         </div>
         <div className={styles.volumeInfo}>
-          <span className={styles.volumeLabel}>
-            {t('chart.volume') || 'Объем'}
-          </span>
+          <span className={styles.volumeLabel}>{t('chart.volume') || 'Объем'}</span>
           <span className={styles.volumeValue}>
             ${combinedData.reduce((sum, item) => sum + item.volume, 0).toLocaleString()}
           </span>
@@ -102,15 +97,11 @@ export const CombinedChart: React.FC = () => {
               </linearGradient>
             </defs>
 
-            <CartesianGrid 
-              strokeDasharray="3 3" 
-              stroke="var(--border-color)" 
-              vertical={false}
-            />
+            <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" vertical={false} />
 
-            <XAxis 
-              dataKey="time" 
-              stroke="var(--border-color)" 
+            <XAxis
+              dataKey="time"
+              stroke="var(--border-color)"
               fontSize={12}
               tickLine={false}
               axisLine={{ stroke: 'var(--border-color)' }}
@@ -137,7 +128,9 @@ export const CombinedChart: React.FC = () => {
               domain={[0, 'dataMax + 10']}
               stroke="var(--volume-color, #8884d8)"
               fontSize={12}
-              tickFormatter={value => value >= 1000 ? `${(value / 1000).toFixed(1)}K` : value.toFixed(0)}
+              tickFormatter={value =>
+                value >= 1000 ? `${(value / 1000).toFixed(1)}K` : value.toFixed(0)
+              }
               tickLine={false}
               axisLine={{ stroke: 'var(--border-color)' }}
             />
@@ -160,14 +153,14 @@ export const CombinedChart: React.FC = () => {
                 }
                 return [value, name];
               }}
-              labelFormatter={(label) => `${t('chart.time')}: ${label}`}
+              labelFormatter={label => `${t('chart.time')}: ${label}`}
             />
 
-            <Legend 
+            <Legend
               verticalAlign="top"
               height={36}
               iconType="square"
-              formatter={(value) => {
+              formatter={value => {
                 if (value === 'price') return t('chart.price') || 'Цена';
                 if (value === 'volume') return t('chart.volume') || 'Объем';
                 return value;
@@ -196,12 +189,15 @@ export const CombinedChart: React.FC = () => {
               opacity={0.6}
               barSize={5}
               name="volume"
-              
             >
               {combinedData.map((entry, index) => (
-                <Cell 
+                <Cell
                   key={`cell-${index}`}
-                  fill={entry.price >= (combinedData[index - 1]?.price || entry.price) ? '#26a69a' : '#ef5350'}
+                  fill={
+                    entry.price >= (combinedData[index - 1]?.price || entry.price)
+                      ? '#26a69a'
+                      : '#ef5350'
+                  }
                   opacity={0.5}
                 />
               ))}

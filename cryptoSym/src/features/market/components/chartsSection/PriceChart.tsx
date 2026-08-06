@@ -16,17 +16,14 @@ import { useTranslation } from 'react-i18next';
 export const PriceChart: React.FC = () => {
   const priceHistory = useSelector((state: RootState) => state.market.priceHistory);
   const { t } = useTranslation();
-    if (!priceHistory || priceHistory.length === 0) {
-    return (
-      <></>
-    );
+  if (!priceHistory || priceHistory.length === 0) {
+    return <></>;
   }
 
   return (
     <div className={styles.chartContainer}>
       <div style={{ width: '100%', height: 450, marginBottom: -30 }}>
         <ResponsiveContainer width="100%" height="100%">
-       
           <AreaChart data={priceHistory} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
               <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
@@ -35,20 +32,20 @@ export const PriceChart: React.FC = () => {
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="var( --border-color)" />
-            
-                        <XAxis 
-                          dataKey="time" 
-                          stroke="var(--border-color)" 
-                          fontSize={0}
-                          tickLine={false}
-                          axisLine={{ stroke: 'var(--border-color)' }}
-                        />
+
+            <XAxis
+              dataKey="time"
+              stroke="var(--border-color)"
+              fontSize={0}
+              tickLine={false}
+              axisLine={{ stroke: 'var(--border-color)' }}
+            />
             <YAxis
               domain={['dataMin - 5', 'dataMax + 5']}
               stroke="var(--border-color)"
               fontSize={12}
               tickFormatter={value => `$${value.toFixed(0)}`}
-              orientation='right'
+              orientation="right"
             />
             <Tooltip
               contentStyle={{
