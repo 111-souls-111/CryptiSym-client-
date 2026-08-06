@@ -1,11 +1,11 @@
 import { useSocket } from './hooks/useSocket';
 import { AuthProvider } from '@zitadel/react-auth';
 import { Layout } from 'antd';
-import { AppHeader } from './features/market/components/layout/AppHeader';
-import { AppContent } from './features/market/components/layout/AppContent';
+import { AppHeader } from './features/layout/components/AppHeader';
+import { AppContent } from './features/layout/components/AppContent';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { LoginPage } from "./features/Auth/LoginPage";
-import { ProtectedRoute } from './features/Auth/ProtectedRoute';
+import { LoginPage } from "./features/Auth/components/LoginPage";
+import { ProtectedRoute } from './features/Auth/components/ProtectedRoute';
 import './index.css';
 
 // Очистка URL после входа

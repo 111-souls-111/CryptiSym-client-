@@ -1,14 +1,14 @@
 import { Layout } from 'antd';
-import { CoinSelector } from '../../components/chartsSection/CoinSelector';
-import { PriceChart } from '../../components/chartsSection/PriceChart';
+import { CoinSelector } from '../../market/components/chartsSection/CoinSelector';
+import { PriceChart } from '../../market/components/chartsSection/PriceChart';
 import { AppSider } from './AppSider';
-import { TimeFramePanel } from '../../components/chartsSection/TimeFramePanel';
+import { TimeFramePanel } from '../../market/components/chartsSection/TimeFramePanel';
 import styles from './AppContent.module.css';
 import { Button } from 'antd/es/radio';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ProductChart } from '../chartsSection/ProductChart';
-import { CoinInfo } from '../chartsSection/CoinInfo';
+import { ProductChart } from '../../market/components/chartsSection/ProductChart';
+import { CoinInfo } from '../../market/components/chartsSection/CoinInfo';
 const { Content } = Layout;
 
 export const AppContent = () => {

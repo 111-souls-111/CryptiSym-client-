@@ -1,7 +1,7 @@
 // AppHeader.tsx
 import { Layout } from 'antd';
 import styles from './AppHeader.module.css';
-import { Nav } from '../nav/Nav';
+import { Nav } from '../../nav/components/Nav';
 
 export const AppHeader = () => {
   return (

@@ -2,7 +2,7 @@ import styles from './LangSelector.module.css';
 import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 import 'flag-icons/css/flag-icons.min.css';
-import type { LangTypes } from '../../types';
+import type { LangTypes } from '../types';
 
 export const LangSelector = () => {
   const languages: LangTypes[] = [

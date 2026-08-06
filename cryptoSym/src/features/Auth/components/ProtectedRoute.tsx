@@ -1,21 +1,19 @@
 // components/Auth/ProtectedRoute.tsx
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../../hooks/useAuth';
 import { Navigate } from 'react-router-dom';
-import styles from "./ProtectedRoute.module.css"
-import { Spin } from 'antd';
+import { useTranslation } from 'react-i18next';
+import { type ProtectedRouteProps } from '../types';
+import LoadingSpin from './LoadingSpin';
 
-interface ProtectedRouteProps {
-  children: React.ReactNode;
-}
 
 export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { isAuthenticated, isLoading } = useAuth();
+  const {t} = useTranslation()
 
   if (isLoading) {
     return (
-      <div className={styles.spinContainer}>
-        <Spin className={styles.spin}  size="large" tip="Загрузка..." />
-      </div>
+      <LoadingSpin t={t}/>
+      
     );
   }
 

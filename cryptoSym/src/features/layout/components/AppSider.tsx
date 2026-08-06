@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
 import styles from './AppSider.module.css';
-import { BuySellPanel } from '../BaySellPanel/BuySellPanel';
+import { BuySellPanel } from '../../market/components/BaySellPanel/BuySellPanel';
 
 interface ComponentProps {
   sider?: boolean;
