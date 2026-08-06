@@ -18,7 +18,9 @@
     "register": "Register",
     "email": "Email",
     "password": "Password",
-    "forgotPassword": "Forgot password?"
+    "forgotPassword": "Forgot password?",
+    "info": "You will be redirected to the Zitadel registration page",
+    "loginInfo": "Log in to your account"
   },
   "trade": {
     "buy": "Buy",

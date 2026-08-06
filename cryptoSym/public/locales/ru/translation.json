@@ -14,11 +14,13 @@
     "waitingForData'": "Данные появятся после начала торгов"
   },
   "auth": {
-    "login": "Вход",
+    "login": "Войти",
     "register": "Регистрация",
     "email": "Email",
     "password": "Пароль",
-    "forgotPassword": "Забыли пароль?"
+    "forgotPassword": "Забыли пароль?",
+    "info": "вы будете перенаправлены на страницу регистрации Zitadel",
+    "loginInfo": "Войдите в свой аккаунт"
   },
   "trade": {
     "buy": "Купить",
