@@ -7,7 +7,7 @@ import styles from './BuySellPanel.module.css';
 import { useTranslation } from 'react-i18next';
 import { BalanceSection } from './BalanceSection';
 import { PriceCard } from './PriceCard';
-import { QuantityInput } from './AmountSection';
+import { QuantityInput } from './QuantityyInput';
 
 export const BuySellPanel = () => {
   const { t } = useTranslation();

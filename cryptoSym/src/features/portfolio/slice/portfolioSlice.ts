@@ -1,33 +1,7 @@
-import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios';
+import type { TradeRequest,TradeResponse, PortfolioState } from '../types';
 
-interface TradeRequest {
-  coin_id: string;
-  type: string;
-  quantity: number;
-}
-
-interface PortfolioItem {
-  coin_id: string;
-  quantity: number;
-  avg_buy_price: number;
-}
-
-interface TradeResponse {
-  success: boolean;
-  message: string;
-  data: {
-    current_balance: number;
-    updated_portfolio: PortfolioItem;
-  };
-}
-
-interface PortfolioState {
-  balance: number;
-  items: Record<string, PortfolioItem>;
-  loading: boolean;
-  error: string | null;
-}
 
 const initialState: PortfolioState = {
   balance: 10000.0,

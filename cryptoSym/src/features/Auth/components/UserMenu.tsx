@@ -5,26 +5,26 @@ import { type MenuProps} from "antd"
 import style from "./UserMenu.module.css"
 
 function UserMenu(){
-    const { user, isAuthenticated, logout } = useAuth(); 
+    const { user, isAuthenticated, logout, hhh } = useAuth(); 
 
     if (!isAuthenticated){
         return null;
     }
 
     const items: MenuProps["items"] = [
-        {
-            key: 'profile',
-            icon: <UserOutlined />,
-            label: "Профиль"
-        },
-        {
-            key: "setting",
-            icon: <SettingOutlined />,
-            label: "Настройки",
-        },
-        {
-            type: 'divider',
-        },
+        // {
+        //     key: 'profile',
+        //     icon: <UserOutlined />,
+        //     label: "Профиль"
+        // },
+        // {
+        //     key: "setting",
+        //     icon: <SettingOutlined />,
+        //     label: "Настройки",
+        // },
+        // {
+        //     type: 'divider',
+        // },
         {
         key: 'logout',
         icon: <LogoutOutlined />,
@@ -42,7 +42,7 @@ function UserMenu(){
     );
 
     return (
-        <Dropdown menu={{ items }} placement="bottomRight">
+        <Dropdown menu={{ items }} className={style.drop}>
             <Space>
                 {avatar}
                 <span className={style.userName}>

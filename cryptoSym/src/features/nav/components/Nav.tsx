@@ -73,6 +73,7 @@ export const Nav = () => {
         selectedKeys={[selectedKey]}
         items={menuItems}
         disabledOverflow={false}
+        overflowedIndicator={<span className={styles.customMore}>Ещё</span>}  // ← кастом
       />
 
       <div className={styles.userWrapper}>

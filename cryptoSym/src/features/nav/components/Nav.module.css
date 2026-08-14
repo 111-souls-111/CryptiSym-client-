@@ -46,6 +46,8 @@
   color: var(--white-color) !important;
 }
 
+
+
 .userWrapper {
   display: flex;
   align-items: center;
@@ -53,6 +55,20 @@
   flex-shrink: 0;
   margin-left: 16px;
 }
+
+.customMore{
+  color: var(--primary-color);
+}
+
+.customMore:hover{
+  color: var(--white-color);
+}
+
+.desktopMenu :global(.ant-menu-submenu-title:hover::after) {
+  border-bottom: 1px solid var(--white-color) !important;
+}
+
+
 
 .replenishmentButton {
   white-space: nowrap;
