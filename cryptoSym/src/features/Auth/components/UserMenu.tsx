@@ -5,7 +5,7 @@ import { type MenuProps} from "antd"
 import style from "./UserMenu.module.css"
 
 function UserMenu(){
-    const { user, isAuthenticated, logout, hhh } = useAuth(); 
+    const { user, isAuthenticated, logout } = useAuth(); 
 
     if (!isAuthenticated){
         return null;

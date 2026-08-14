@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next';
 
 export const ProductChart: React.FC = () => {
   const volumeHistory = useSelector((state: RootState) => state.market.volumeHistory);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   if (!volumeHistory || volumeHistory.length === 0) {
     return (
       <div className={styles.chartContainer}>
         <div className={styles.emptyState}>
-          <div className={styles.emptyTitle}>{t('commom.noData')}</div>
+          <div className={styles.emptyTitle}>{t('common.noData')}</div>
           <div className={styles.emptyDescription}>{t('common.waitingForData')}</div>
         </div>
       </div>

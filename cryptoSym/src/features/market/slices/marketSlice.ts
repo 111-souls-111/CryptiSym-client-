@@ -6,8 +6,8 @@ const initialState: MarketState = {
   selectedTimeFrame: '24h',
   coinsList: [],
   selectedCoinId: 'bitcoin',
-  currentPrice: 897.4,
-  change24hPercent: 52.28,
+  currentPrice: 0,
+  change24hPercent: 0,
   priceHistory: [],
   volumeHistory: [],
 };
