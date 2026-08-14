@@ -1,6 +1,6 @@
 import { InputNumber, Typography } from 'antd';
 import { type QuantityInputProps } from '../../types';
-import styles from './AmountSection.module.css';
+import styles from './QuantityInput.module.css';
 
 const { Text } = Typography;
 
