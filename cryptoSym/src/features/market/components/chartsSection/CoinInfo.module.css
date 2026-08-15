@@ -1,16 +1,21 @@
 .priceInfo {
-  display: flex;
   color: var(--primary-color);
+  padding-bottom: 20px;
+
+}
+
+.chartsHeader{
+  display: flex;
   align-items: center;
-  padding-bottom: 10px;
+  justify-content: space-between;
 }
 
 .priceRow {
-  height: 10px;
+  height: 25px;
 }
 
 .priceLabel {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .up {
@@ -27,14 +32,54 @@
   margin-left: 5px;
 }
 
-.priceRow {
-  padding-left: 5px;
-}
+
 
 .priceChange {
   margin-left: 10px;
+  font-size: 20px;
 }
 
 .priceValue {
   color: var(--white-color);
+  font-size: 30px;
 }
+
+.volumeLabel{
+  color: var(--primary-color);
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.volumeValue{
+  font-size: 30px;
+}
+
+@media (max-width: 640px){
+  .chartsHeader{
+    flex-wrap: wrap;
+  }
+  .volumeLabel{
+  font-size: 20px;
+  margin-right: 0px;
+}
+.volumeValue{
+  font-size: 20px;
+}
+.priceValue {
+  color: var(--white-color);
+  font-size: 20px;
+}
+.priceLabel {
+  font-size: 20px;
+}
+.priceChange {
+  margin-left: 10px;
+  font-size: 15px;
+}
+.priceInfo {
+  
+  padding-bottom: 5px;
+
+}
+}
+

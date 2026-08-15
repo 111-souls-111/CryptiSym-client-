@@ -3,6 +3,7 @@
   border-radius: 16px;
   color: var(--white-color);
   margin: 30px;
+  /* width: 300px !important; */
 }
 
 .actionButtons {

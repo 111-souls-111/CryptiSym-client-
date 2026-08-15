@@ -20,7 +20,7 @@ export const AppSider = ({ sider, mobileOpen, onClose }: ComponentProps) => {
   };
 
   return (
-    <Layout.Sider width="400px" className={getClassName()}>
+    <Layout.Sider width="410px" className={getClassName()}>
       {mobileOpen && (
         <button onClick={onClose} className={styles.closeButton}>
           ✕

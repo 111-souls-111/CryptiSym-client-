@@ -32,10 +32,10 @@ export const CoinInfo: React.FC = () => {
         </div>
       </div>
       <div className={styles.volumeInfo}>
-        <span className={styles.volumeLabel}>{t('chart.volume')}</span>
-        <span className={styles.volumeValue}>
+        <span className={styles.volumeLabel}>{t('chart.volume')}:</span>
+        <div className={styles.volumeValue}>
           ${volumeHistory.reduce((sum, item) => sum + item.volume, 0).toLocaleString()}
-        </span>
+        </div>
       </div>
     </div>
   );

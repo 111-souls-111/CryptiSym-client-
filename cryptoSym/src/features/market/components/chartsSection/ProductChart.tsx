@@ -59,7 +59,7 @@ export const ProductChart: React.FC = () => {
               padding: '12px',
             }}
             formatter={(value: any) => [`$${value.toFixed(2)}`, t('chart.volume')]}
-            labelFormatter={label => `${t('chart.time')}: ${label}`}
+            labelFormatter={label => `${label}`}
           />
 
           <Bar
