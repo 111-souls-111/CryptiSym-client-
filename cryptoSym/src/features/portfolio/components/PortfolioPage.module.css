@@ -1,0 +1,71 @@
+.page {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--white-color) !important;
+  margin: 0 !important;
+}
+
+.summaryCard {
+  background: var(--primary-color) !important;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+.summaryItem {
+  text-align: center;
+  min-width: 160px;
+}
+
+.summaryItem :global(.ant-typography) {
+  color: var(--white-color) !important;
+}
+
+.pnlUp {
+  color: var(--arrow-green) !important;
+}
+
+.pnlDown {
+  color: var(--arrow-red) !important;
+}
+
+.table {
+  background: transparent !important;
+}
+
+.table :global(.ant-table) {
+  background: var(--primary-color) !important;
+  color: var(--white-color);
+  border-radius: 12px;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  background: var(--accent-color) !important;
+  color: var(--white-color) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  background: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table :global(.ant-table-tbody > tr:hover > td) {
+  background: var(--accent-color) !important;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}

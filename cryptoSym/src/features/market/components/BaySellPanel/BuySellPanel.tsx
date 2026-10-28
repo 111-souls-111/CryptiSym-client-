@@ -34,7 +34,7 @@ export const BuySellPanel = () => {
   const ownedQuantity = portfolioItems[coinId]?.quantity || 0;
 
   const coinDisplayName = coinId.charAt(0).toUpperCase() + coinId.slice(1);
-  const isPriceUp = lastPrice >=firstPrice;
+  const isPriceUp = lastPrice >= firstPrice;
 
   const handlePay = async () => {
     if (!quantity || quantity < 0.00000001) {

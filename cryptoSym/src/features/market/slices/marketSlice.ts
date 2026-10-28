@@ -10,7 +10,7 @@ const initialState: MarketState = {
   change24hPercent: 0,
   priceHistory: [],
   volumeHistory: [],
-  pricesByCoinId: []
+  pricesByCoinId: {}
 };
 
 const marketSlice = createSlice({
@@ -37,6 +37,11 @@ const marketSlice = createSlice({
         id: item.coin_id,
         name: item.coin_id,
       }));
+      const prices: Record<string, number> = {};
+      for (const coin of serverDataArray) {
+        prices[coin.coin_id] = coin.current_price;
+      }
+      state.pricesByCoinId = prices;
 
       if (!Array.isArray(serverDataArray)) return;
 

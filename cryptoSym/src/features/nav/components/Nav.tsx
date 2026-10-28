@@ -31,8 +31,8 @@ export const Nav = () => {
       icon: <ShopOutlined />,
     },
     {
-      key: '/about',
-      label: <Link to="/about">{t('nav.portfolio')}</Link>,
+      key: '/portfolio',
+      label: <Link to="/portfolio">{t('nav.portfolio')}</Link>,
       icon: <WalletOutlined />,
     },
     {

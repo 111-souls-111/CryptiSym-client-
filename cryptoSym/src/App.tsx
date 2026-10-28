@@ -6,6 +6,8 @@ import { AppContent } from './features/layout/components/AppContent';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LoginPage } from "./features/Auth/components/LoginPage";
 import { ProtectedRoute } from './features/Auth/components/ProtectedRoute';
+import { PortfolioPage } from './features/portfolio/components/PortfolioPage';
+
 import './index.css';
 
 // Очистка URL после входа
@@ -29,7 +31,20 @@ function App() {
         <Routes>
           {/* Страница логина (публичная) */}
           <Route path="/login" element={<LoginPage />} />
-          
+     
+             <Route 
+            path="/portfolio*" 
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <AppHeader />
+                  <Layout>
+                    <PortfolioPage/>
+                  </Layout>
+                </Layout>
+              </ProtectedRoute>
+            } 
+          />
           <Route 
             path="/*" 
             element={

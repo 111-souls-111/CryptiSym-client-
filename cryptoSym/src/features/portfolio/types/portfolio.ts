@@ -19,9 +19,22 @@ export interface TradeResponse {
   };
 }
 
+export interface Transaction {
+  id: string;
+  coin_id: string;
+  type: 'BUY' | 'SELL';
+  quantity: number;
+  price_at_trade: number;
+  total_usd: number;
+  created_at: string;
+}
+
+
 export interface PortfolioState {
   balance: number;
   items: Record<string, PortfolioItem>;
+  transactions: Transaction[];
   loading: boolean;
+  transactionsLoading: boolean;
   error: string | null;
 }
