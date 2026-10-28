@@ -10,6 +10,7 @@ const initialState: MarketState = {
   change24hPercent: 0,
   priceHistory: [],
   volumeHistory: [],
+  pricesByCoinId: []
 };
 
 const marketSlice = createSlice({

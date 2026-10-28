@@ -11,4 +11,5 @@ export interface MarketState {
   change24hPercent: number;
   priceHistory: ChartPoint[];
   volumeHistory: VolumePoint[];
+  pricesByCoinId: Record<string, number>;
 }
