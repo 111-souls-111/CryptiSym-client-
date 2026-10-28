@@ -9,6 +9,7 @@ import { ProtectedRoute } from './features/Auth/components/ProtectedRoute';
 import { PortfolioPage } from './features/portfolio/components/PortfolioPage';
 
 import './index.css';
+import { TransactionsPage } from './features/portfolio/components/TransactionPage';
 
 // Очистка URL после входа
 const onSigninCallback = () => {
@@ -32,7 +33,7 @@ function App() {
           {/* Страница логина (публичная) */}
           <Route path="/login" element={<LoginPage />} />
      
-             <Route 
+            <Route 
             path="/portfolio*" 
             element={
               <ProtectedRoute>
@@ -44,7 +45,21 @@ function App() {
                 </Layout>
               </ProtectedRoute>
             } 
+            
           />
+                      <Route 
+            path="/transaction" 
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <AppHeader />
+                  <Layout>
+                    <TransactionsPage/>
+                  </Layout>
+                </Layout>
+              </ProtectedRoute>
+            } 
+            />
           <Route 
             path="/*" 
             element={

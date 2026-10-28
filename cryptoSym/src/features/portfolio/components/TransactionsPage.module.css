@@ -1,0 +1,80 @@
+.page {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+  color: var(--white-color);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--white-color) !important;
+  margin: 0 !important;
+}
+
+.table {
+  background: transparent !important;
+}
+
+.table :global(.ant-table) {
+  background: var(--primary-color) !important;
+  color: var(--white-color);
+  border-radius: 12px;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  background: var(--accent-color) !important;
+  color: var(--white-color) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  background: var(--primary-color) !important;
+  color: var(--white-color) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table :global(.ant-table-tbody > tr:hover > td) {
+  background: var(--accent-color) !important;
+}
+
+.table :global(.ant-pagination) {
+  margin-top: 16px;
+}
+
+.table :global(.ant-pagination-item),
+.table :global(.ant-pagination-prev),
+.table :global(.ant-pagination-next) {
+  background: var(--primary-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.table :global(.ant-pagination-item a),
+.table :global(.ant-pagination-prev button),
+.table :global(.ant-pagination-next button) {
+  color: var(--white-color) !important;
+}
+
+.table :global(.ant-pagination-item-active) {
+  background: var(--accent-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.emptyCard {
+  background: var(--primary-color) !important;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.emptyCard :global(.ant-empty-description) {
+  color: var(--white-color) !important;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}

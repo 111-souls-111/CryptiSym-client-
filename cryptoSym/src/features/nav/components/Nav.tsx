@@ -35,11 +35,11 @@ export const Nav = () => {
       label: <Link to="/portfolio">{t('nav.portfolio')}</Link>,
       icon: <WalletOutlined />,
     },
-    {
-      key: '/products',
-      label: <Link to="/products">{t('nav.transaction')}</Link>,
-      icon: <SwapOutlined />,
-    },
+    // {
+    //   key: '/transaction',
+    //   label: <Link to="/transaction">{t('nav.transaction')}</Link>,
+    //   icon: <SwapOutlined />,
+    // },
     
   ];
 
