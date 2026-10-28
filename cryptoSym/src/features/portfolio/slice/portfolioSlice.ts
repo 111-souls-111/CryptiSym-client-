@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import axios from 'axios';
 import type { TradeRequest,TradeResponse, PortfolioState } from '../types';
+import api from '../../../services/api';
 
 
 const initialState: PortfolioState = {
@@ -16,7 +17,7 @@ export const executeTrade = createAsyncThunk<
   { rejectValue: string }
 >('portfolio/executeTrade', async (tradeData, { rejectWithValue }) => {
   try {
-    const response = await axios.post<TradeResponse>('/api/v1/trade', tradeData);
+    const response = await api.post<TradeResponse>('/api/v1/trade', tradeData);
     return response.data.data;
   } catch (err: any) {
     return rejectWithValue(err.response?.data?.message || 'Transaction failed');

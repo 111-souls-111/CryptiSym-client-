@@ -23,8 +23,8 @@
     "loginInfo": "Log in to your account"
   },
   "trade": {
-    "buy": "Buy",
-    "sell": "Sell",
+    "buy": "BUY",
+    "sell": "SELL",
     "balance": "Сurrent balance",
     "amountBuy": "AMOUNT ",
     "price": "Сurrent price",
