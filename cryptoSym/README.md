@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# 📈 CryptoSim — Платформа для симуляции крипто-трейдинга
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CryptoSim** — это интерактивное SPA-приложение, предоставляющее аналитический интерфейс для мониторинга котировок криптовалют в реальном времени и симуляции торговых операций без риска потери реального капитала. 
 
-Currently, two official plugins are available:
+Проект разработан в рамках командной разработки. **Данный репозиторий содержит клиентскую часть (Frontend)**, отвечающую за интерфейс, визуализацию данных, стейт-менеджмент и real-time взаимодействие.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Стек технологий (Frontend)
 
-## Expanding the ESLint configuration
+*   **Core:** React 18, TypeScript, Vite
+*   **State Management:** Redux Toolkit (RTK)
+*   **UI Framework:** Ant Design (v5)
+*   **Charts:** Recharts
+*   **Network Layer:** Socket.io-client (WebSockets), Axios (REST API)
+*   **Code Quality:** ESLint, Prettier
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Ключевые возможности (Features)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+*   **Real-time мониторинг:** Получение актуальных цен и данных для графиков через WebSockets каждые 2 секунды.
+*   **Интерактивная визуализация:** Отрисовка линейных графиков цен и гистограмм объемов торгов с помощью Recharts.
+*   **Управление таймфреймами:** Возможность переключения временных интервалов (от 1 минуты до 1 месяца) с запросом новых данных с сервера.
+*   **Торговый терминал:** Виджет для покупки и продажи активов с локальной валидацией (проверка достаточности баланса и объема).
+*   **Управление состоянием:** Централизованный стейт-менеджмент на Redux Toolkit для баланса, истории транзакций и рыночных данных.
+*   **Авторизация:** Интерфейс входа и регистрации пользователей.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏗 Архитектура приложения
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Проект построен по принципу разделения ответственности (Separation of Concerns):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+1.  **UI-слой (Components):** Презентационные компоненты, отвечающие за отображение данных и взаимодействие с пользователем. Используется библиотека Ant Design.
+2.  **Слой состояния (Redux Store):** 
+    *   `marketSlice` — хранит текущие котировки и историю для графиков.
+    *   `portfolioSlice` — хранит баланс пользователя и купленные активы.
+    *   `historySlice` — хранит лог транзакций.
+3.  **Сетевой слой (Services):** 
+    *   `socket.ts` — настройка и обработка событий WebSocket (`market_tickers`).
+    *   `api.ts` — инстанс Axios с интерсепторами для работы с REST API.
+4.  **Типизация:** Строгие интерфейсы TypeScript (описаны контракты данных для всех REST-запросов и Socket-событий), что исключает ошибки при интеграции с бэкендом.
+
+---
+
+## 🚀 Запуск проекта локально
+
+Для запуска клиентской части выполните следующие шаги:
+
+1.  Клонируйте репозиторий:
+    ```bash
+    git clone https://github.com/Stellar13/your-repo-name.git
+    cd your-repo-name
