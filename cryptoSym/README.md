@@ -53,3 +53,9 @@
     ```bash
     git clone https://github.com/Stellar13/your-repo-name.git
     cd your-repo-name
+2.Установите зависимости
+```
+npm install
+```
+3. Запустите сервер разработки
+```npm run dev```
